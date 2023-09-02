@@ -60,6 +60,8 @@ $(document).ready(function () {
 
 */ //Editado aqui
 // Inicio das edições
+
+/* cANSEI DA ALERT BAR
 var alertbarFechada = sessionStorage.getItem('alertbarFechada');
  // Se a alertbar não tiver sido fechada, exiba-a
     if (!alertbarFechada) {
@@ -89,7 +91,7 @@ var alertbarFechada = sessionStorage.getItem('alertbarFechada');
         $(this).removeClass('spoiler');
     });
 
-
+*/
 //Final das edições
 
     // Smooth on external page
