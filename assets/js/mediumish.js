@@ -20,8 +20,8 @@ jQuery(document).ready(function($){
       });
     }
 
-    // alertbar later
-   /* $(document).scroll(function () {
+   /*Editado aqui // alertbar later
+    $(document).scroll(function () {
         var y = $(this).scrollTop();
         if (y > 280) {
             $('.alertbar').fadeIn();
@@ -29,7 +29,7 @@ jQuery(document).ready(function($){
             $('.alertbar').fadeOut();
         }
     });
-	*/
+	
 	
 	//alertbar closed
 	
@@ -58,7 +58,31 @@ $(document).ready(function () {
 });
 </script>
 
+*/ //Editado aqui
+// Inicio das edições
+<script>
+$(document).ready(function () {
+    var alertbarFechada = sessionStorage.getItem('alertbarFechada');
+    
+    if (!alertbarFechada) {
+        $(document).scroll(function () {
+            var y = $(this).scrollTop();
+            if (y > 280) {
+                $('.alertbar').fadeIn();
+            } else {
+                $('.alertbar').fadeOut();
+            }
+        });
+    }
+});
 
+function fecharAlert() {
+    $('.alertbar').fadeOut();
+    sessionStorage.setItem('alertbarFechada', 'true');
+}
+</script>
+
+//Final das edições
 
     // Smooth on external page
     $(function() {
