@@ -65,10 +65,10 @@ section.recent-posts {
 
 .section-title h2 {
     border-bottom: 1px solid rgba(0, 0, 0, .125);
-    margin-bottom: 25px;
+    margin-bottom: 5px;
+	margin-top: 10px;
     font-weight: 700;
     font-size: 1.4rem;
-    margin-bottom: 27px;
 }
 
 .section-title span {
