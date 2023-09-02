@@ -900,6 +900,4 @@ iframe {
     transition: opacity .25s;
 }
 
-.alertbar .site.alertimage {
-    max-height: 50px; /* Substitua "100px" pela altura máxima desejada */
-}
+
