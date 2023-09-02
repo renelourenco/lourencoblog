@@ -907,20 +907,21 @@ iframe {
 }
 
 /* Define o estilo para cada coluna */
-.coluna, .coluna2, .coluna3 {
+.coluna {
     flex: 0 0 calc(33.33% - 20px); /* 33.33% de largura com margens entre as colunas */
     margin-right: 20px; /* Espaçamento entre as colunas */
 }
 
 /* Remove a margem da última coluna para evitar que haja espaço extra */
-.coluna3 {
+.coluna:last-child {
     margin-right: 0;
 }
 
 /* Estilo adicional para tornar as colunas visualmente agradáveis */
-.coluna, .coluna2, .coluna3 {
+.coluna {
     padding: 20px;
     background-color: #f2f2f2;
     border: 1px solid #ddd;
     box-sizing: border-box;
 }
+
