@@ -410,10 +410,10 @@ blockquote {
         margin-bottom: 0 !Important;
     }
 
-    .alertbar form {
+    /*.alertbar form {
         margin-top: 20px;
     }
-
+*/
     .alertbar span,
     .alertbar form {
         display: block;
@@ -539,7 +539,7 @@ ul.tags li a:hover {
     margin-top: -4px;
 }
 
-.alertbar {
+/*.alertbar {
     box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, .0785);
     position: fixed;
     bottom: 0;
@@ -550,7 +550,7 @@ ul.tags li a:hover {
     z-index: 1;
     display: none;
 }
-
+*/
 .close-button {
     position: absolute;
     top: 5px;
@@ -566,7 +566,7 @@ ul.tags li a:hover {
     display: inline-block;
 }
 
-.alertbar input[type="email"] {
+/*.alertbar input[type="email"] {
     font-size: 0.85rem;
     padding: 3px 5px 3px 10px;
     border-top-left-radius: 3px;
@@ -578,7 +578,7 @@ ul.tags li a:hover {
     letter-spacing: 0.5px;
     margin-left: 5px;
 }
-
+*/
 .alertbar input[type="submit"] {
     background-color: #1C9963;
     border: 1px solid #1C9963;
