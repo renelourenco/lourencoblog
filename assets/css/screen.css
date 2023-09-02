@@ -171,7 +171,7 @@ section.recent-posts {
 
 .wrapfooter {
     font-size: .8rem;
-    display: flex;
+		
     align-items: center;
     margin-bottom: 15px;
 }
@@ -899,7 +899,28 @@ iframe {
     transition: opacity .25s;
 }
 
-.coluna, .coluna2, .coluna3 {
-    max-width: 33%;
+/* Aplica o flexbox para a row */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
+/* Define o estilo para cada coluna */
+.coluna, .coluna2, .coluna3 {
+    flex: 0 0 calc(33.33% - 20px); /* 33.33% de largura com margens entre as colunas */
+    margin-right: 20px; /* Espaçamento entre as colunas */
+}
+
+/* Remove a margem da última coluna para evitar que haja espaço extra */
+.coluna3 {
+    margin-right: 0;
+}
+
+/* Estilo adicional para tornar as colunas visualmente agradáveis */
+.coluna, .coluna2, .coluna3 {
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
