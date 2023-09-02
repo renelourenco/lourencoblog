@@ -32,25 +32,30 @@ jQuery(document).ready(function($){
 	
 	//alertbar closed
 	
-	$(document).ready(function () {
-    var alertClosed = localStorage.getItem('alertClosed');
+<script>
+var alertbarFechada = false;
+
+function fecharAlert() {
+    $('#alertbar').fadeOut();
+    alertbarFechada = true;
+    sessionStorage.setItem('alertbarFechada', 'true');
+}
+
+$(document).ready(function () {
+    var alertbarFechadaNaSessao = sessionStorage.getItem('alertbarFechada');
     
-    if (!alertClosed) {
+    if (!alertbarFechadaNaSessao && !alertbarFechada) {
         $(document).scroll(function () {
             var y = $(this).scrollTop();
             if (y > 280) {
-                $('.alertbar').fadeIn();
+                $('#alertbar').fadeIn();
             } else {
-                $('.alertbar').fadeOut();
+                $('#alertbar').fadeOut();
             }
         });
     }
 });
-
-function fecharAlert() {
-    $('.alertbar').fadeOut();
-    localStorage.setItem('alertClosed', 'true');
-}
+</script>
 
 
 
