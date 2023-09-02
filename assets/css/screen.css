@@ -564,16 +564,15 @@ ul.tags li a:hover {
 }
 
 .close-button {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-		left: 5px;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        font-size: 16px;
-        color: #333; /* Cor do botão */
-    }
+    position: absolute;
+    top: 5px;
+    right: 5px; /* Ajuste a propriedade right para alinhar à direita */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333; /* Cor do botão */
+}
 
 .alertbar form {
     display: inline-block;
