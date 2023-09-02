@@ -4,7 +4,7 @@ title: "Lourenço Blog"
 description: "Somente um experimento social"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
-baseurl: /lourencoblog
+baseurl: ''
 google_analytics: ''
 disqus: 'demowebsite'
 mailchimp-list: ''
