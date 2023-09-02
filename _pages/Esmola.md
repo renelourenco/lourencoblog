@@ -6,25 +6,23 @@ comments: true
 ---
 
 <div class="row justify-content-between">
-<div class="coluna estranha">
+    <div class="coluna estranha">
+        <h2>Título Coluna 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet nisi vel justo dictum, nec malesuada dolor mollis.</p>
+        <p>Vivamus rhoncus purus a neque suscipit, id efficitur nisi tincidunt. Fusce id ante non turpis congue iaculis.</p>
+    </div>
 
-<p>This website is built with Jekyll and Mediumish template for Jekyll. It's for demonstration purposes, no real content can be found. Mediumish template for Jekyll is compatible with Github pages, in fact even this demo is created with Github Pages and hosted with Github.</p>
-# Conteúdo da página
+    <div class="coluna estranha2">
+        <h2>Coluna 2 Buscando</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet nisi vel justo dictum, nec malesuada dolor mollis.</p>
+        <p>Vivamus rhoncus purus a neque suscipit, id efficitur nisi tincidunt. Fusce id ante non turpis congue iaculis.</p>
+    </div>
+
+    <div class="coluna estranha3">
+        <h2>Coluna 3 Buscando</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet nisi vel justo dictum, nec malesuada dolor mollis.</p>
+        <p>Vivamus rhoncus purus a neque suscipit, id efficitur nisi tincidunt. Fusce id ante non turpis congue iaculis.</p>
+    </div>
 </div>
 
-<div class="coluna estranha2">
 
-<p>This website is built with Jekyll and Mediumish template for Jekyll. It's for demonstration purposes, no real content can be found. Mediumish template for Jekyll is compatible with Github pages, in fact even this demo is created with Github Pages and hosted with Github.</p>
-# Conteúdo da página
-</div>
-
-<div class="coluna estranha3">
-
-<p>This website is built with Jekyll and Mediumish template for Jekyll. It's for demonstration purposes, no real content can be found. Mediumish template for Jekyll is compatible with Github pages, in fact even this demo is created with Github Pages and hosted with Github.</p>
-# Conteúdo da página
-</div>
-
-
-Aqui está o conteúdo da sua página Markdown.
-
-Você pode usar Markdown normalmente para formatar o conteúdo.
