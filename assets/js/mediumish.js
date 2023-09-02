@@ -60,10 +60,8 @@ $(document).ready(function () {
 
 */ //Editado aqui
 // Inicio das edições
-
-$(document).ready(function () {
-    var alertbarFechada = sessionStorage.getItem('alertbarFechada');
-    
+var alertbarFechada = sessionStorage.getItem('alertbarFechada');
+ // Se a alertbar não tiver sido fechada, exiba-a
     if (!alertbarFechada) {
         $(document).scroll(function () {
             var y = $(this).scrollTop();
@@ -74,12 +72,22 @@ $(document).ready(function () {
             }
         });
     }
-});
 
-function fecharAlert() {
-    $('.alertbar').fadeOut();
-    sessionStorage.setItem('alertbarFechada', 'true');
-}
+    // Função para fechar a alertbar
+    function fecharAlert() {
+        $('.alertbar').fadeOut();
+        sessionStorage.setItem('alertbarFechada', 'true');
+    }
+
+    // Associar a função fecharAlert ao botão de fechar
+    $('#fecharAlertButton').click(function () {
+        fecharAlert();
+    });
+
+    // Spoilers
+    $(document).on('click', '.spoiler', function () {
+        $(this).removeClass('spoiler');
+    });
 
 
 //Final das edições
