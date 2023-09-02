@@ -1,5 +1,5 @@
 ---
-layout: esmola
+layout: loja
 title: Loja
 permalink: /loja
 comments: true
