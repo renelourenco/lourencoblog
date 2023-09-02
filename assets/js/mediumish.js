@@ -60,7 +60,7 @@ $(document).ready(function () {
 
 */ //Editado aqui
 // Inicio das edições
-<script>
+
 $(document).ready(function () {
     var alertbarFechada = sessionStorage.getItem('alertbarFechada');
     
@@ -80,7 +80,7 @@ function fecharAlert() {
     $('.alertbar').fadeOut();
     sessionStorage.setItem('alertbarFechada', 'true');
 }
-</script>
+
 
 //Final das edições
 
