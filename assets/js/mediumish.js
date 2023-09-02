@@ -29,6 +29,28 @@ jQuery(document).ready(function($){
             $('.alertbar').fadeOut();
         }
     });
+	
+	//alertbar closed
+	
+	$(document).ready(function () {
+    var alertClosed = localStorage.getItem('alertClosed');
+    
+    if (!alertClosed) {
+        $(document).scroll(function () {
+            var y = $(this).scrollTop();
+            if (y > 280) {
+                $('.alertbar').fadeIn();
+            } else {
+                $('.alertbar').fadeOut();
+            }
+        });
+    }
+});
+
+function fecharAlert() {
+    $('.alertbar').fadeOut();
+    localStorage.setItem('alertClosed', 'true');
+}
 
 
     // Smooth on external page
