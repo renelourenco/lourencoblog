@@ -925,3 +925,14 @@ iframe {
     box-sizing: border-box;
 }
 
+/* Adicione uma regra de mídia para dispositivos com largura máxima de 768px (smarthphones) */
+@media screen and (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Colunas empilhadas verticalmente */
+    }
+
+    .coluna {
+        flex: 0 0 100%; /* Largura total para cada coluna em smartphones */
+        margin-right: 0; /* Remova a margem para evitar espaço extra */
+    }
+}
