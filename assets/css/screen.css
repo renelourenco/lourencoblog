@@ -899,4 +899,7 @@ iframe {
     transition: opacity .25s;
 }
 
+.coluna, .coluna2, .coluna3 {
+    max-width: 33%;
+}
 
