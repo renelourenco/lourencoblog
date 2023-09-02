@@ -5,7 +5,7 @@ permalink: /loja
 comments: true
 ---
 
-<div class="row justify-content-between">
+
     <div class="coluna estranha">
         <h2>Título Coluna 1</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
