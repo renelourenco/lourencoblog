@@ -918,7 +918,7 @@ iframe {
 }
 
 /* Estilo adicional para tornar as colunas visualmente agradáveis */
-.coluna {
+.coluna1, .coluna2, .coluna3  {
     padding: 20px;
     background-color: #f2f2f2;
     border: 1px solid #ddd;
@@ -931,7 +931,7 @@ iframe {
         flex-direction: column; /* Colunas empilhadas verticalmente */
     }
 
-    .coluna {
+    .coluna1, .coluna2, .coluna3 {
         flex: 0 0 100%; /* Largura total para cada coluna em smartphones */
         margin-right: 0; /* Remova a margem para evitar espaço extra */
     }
