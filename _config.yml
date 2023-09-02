@@ -5,6 +5,7 @@ description: "Somente um experimento social"
 logo: 'assets/images/Lourenço Retangulo.png'
 favicon: 'assets/images/logo.png'
 baseurl: ''
+alertimage: 'assets/images/logo.png'
 google_analytics: ''
 disqus: 'demowebsite'
 mailchimp-list: ''
