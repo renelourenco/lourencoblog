@@ -320,7 +320,7 @@ span.post-read-more a:hover {
     font-size: 0.8rem;
     color: rgba(0, 0, 0, .44);
     margin-top: 50px;
-    margin-bottom: 62px;
+    margin-bottom: 10px;
     position: relative;
     background: #fff;
 }
@@ -400,13 +400,7 @@ blockquote {
         height: 359px;
     }
 
-    .alertbar {
-        position: relative !Important;
-        margin-bottom: 20px;
-        margin-top: 20px;
-        box-shadow: none !Important;
-        padding-right: 14px !Important;
-    }
+    
 
     #comments {
         margin-right: 15px;
