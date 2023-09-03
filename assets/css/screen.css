@@ -901,8 +901,10 @@ iframe {
 
 /* Aplica o flexbox para a row */
 .row {
+	
     display: flex;
     flex-wrap: wrap;
+	flex-direction: row;
     justify-content: space-between;
 }
 
@@ -923,6 +925,7 @@ iframe {
     background-color: #f2f2f2;
     border: 1px solid #ddd;
     box-sizing: border-box;
+	display: flex; flex-direction: column;
 }
 
 /* Adicione uma regra de mídia para dispositivos com largura máxima de 768px (smarthphones) */
