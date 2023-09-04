@@ -6,9 +6,9 @@ var documents = [{
     "body": "404 Page does not exist!Please use the search bar at the top or visit our homepage! "
     }, {
     "id": 1,
-    "url": "http://localhost:4000/about",
-    "title": "Mediumish Template for Jekyll",
-    "body": "This website is built with Jekyll and Mediumish template for Jekyll. It's for demonstration purposes, no real content can be found. Mediumish template for Jekyll is compatible with Github pages, in fact even this demo is created with Github Pages and hosted with Github.  Documentation: Please, read the docs here. Questions or bug reports?: Head over to our Github repository! Buy me a coffeeThank you for your support! Your donation helps me to maintain and improve Mediumish . Buy me a coffee Documentation"
+    "url": "http://localhost:4000/sobre",
+    "title": "Sobre este Blog...",
+    "body": "Aqui está em construção e continuará por algum tempo. . . Não espere qualidade, nexo ou profissionalismo neste blog, estamos aqui somente para refletir se peixe dorme e descobrir se o Paradoxo do Navio de Teseu é uma analogia ao corpo humano. Uma bela foto do Roger:"
     }, {
     "id": 2,
     "url": "http://localhost:4000/categories",
