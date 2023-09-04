@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Mediumish Template for Jekyll
 permalink: /loja
 comments: true
