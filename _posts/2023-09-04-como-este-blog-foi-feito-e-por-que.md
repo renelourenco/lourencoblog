@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Como este blog foi feito e por quê."
-author: Rene
+author: rene
 categories: [ tech ]
 image: assets/images/21.png
 ---
