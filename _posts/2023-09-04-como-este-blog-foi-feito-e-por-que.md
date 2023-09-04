@@ -4,6 +4,8 @@ title:  "Como este blog foi feito e por quê."
 author: rene
 categories: [ tech ]
 image: assets/images/21.png
+featured: true
+hidden: true
 ---
 Este artigo vai existir (talvez), mas por ora foi feito como placeholder para teste.
 
