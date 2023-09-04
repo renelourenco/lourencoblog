@@ -32,7 +32,7 @@ comments: false
 
 <p>Mema fita, você me paga uma pizza e recebe a foto dela no seu e-mail em 1 dia corrido.</p>
 
-<p class="mb-4"><img class="shadow-sm rounded-3" src="{{site.baseurl}}/assets/images/gatopizza.png" alt="Gato tocando uma pizza" /></p>
+<p class="mb-4"><img class="shadow-sm rounded-3" src="{{site.baseurl}}/assets/images/gatopizza.PNG" alt="Gato tocando uma pizza" /></p>
 
 <div class="text-center">
 <a href="https://go.perfectpay.com.br/PPU38CN2AA4" class="btn btn-primary">R$49,90</a>
