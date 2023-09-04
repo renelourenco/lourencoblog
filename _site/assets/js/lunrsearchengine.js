@@ -23,7 +23,7 @@ var documents = [{
     "id": 4,
     "url": "http://localhost:4000/loja",
     "title": "Loja de Itens Inúteis",
-    "body": "AAAAAAAThis website is built with Jekyll and Mediumish template for Jekyll. It's for demonstration purposes, no real content can be found. Mediumish template for Jekyll is compatible with Github pages, in fact even this demo is created with Github Pages and hosted with Github.  Documentation: Please, read the docs here. Questions or bug reports?: Head over to our Github repository! Buy me a coffeeThank you for your support! Your donation helps me to maintain and improve Mediumish . Buy me a coffee DocumentationBuy me a coffeeThank you for your support! Your donation helps me to maintain and improve Mediumish . Buy me a coffee Documentation"
+    "body": " Não, isso não é realmente uma loja. É uma forma de você comprar nadas exclusivos e personalizados. Acredite, você vai se arrepender. (Ou não, afinal eu usarei seu dinheiro para fins muito úteis como comprar uma cerveja. Me pagar uma beraVocê me paga uma cerveja e recebe uma foto minha bebendo ela no seu e-mail. Leva no máximo 1 dia corrido.  R$9,97Me pagar uma pizzaMema fita, você me paga uma pizza e recebe a foto dela no seu e-mail em 1 dia corrido.  R$49,90Você só ficou maluco mesmoNão tive mais ideias, pelo visto eu vivo de cerveja e pizza. Mas vai que você ficou maluco e quer fazer a boa. Vai fundo.  R$97,50"
     }, {
     "id": 5,
     "url": "http://localhost:4000/page2/",

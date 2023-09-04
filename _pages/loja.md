@@ -2,44 +2,61 @@
 layout: loja
 title: Loja de Itens Inúteis
 permalink: /loja
-comments: true
+comments: false
 ---
 
+<p class="lead">
+  Não, isso não é realmente uma loja. É uma forma de você comprar nadas exclusivos e personalizados. Acredite, você vai se arrepender. (Ou não, afinal eu usarei seu dinheiro para fins muito úteis como comprar uma cerveja.
+</p>
+
 <div class="row justify-content-between">
-<div class="col-md-4 pr-5">
+<div class="col-md-4">
 
-<p>AAAAAAAThis website is built with Jekyll and Mediumish template for Jekyll. It's for demonstration purposes, no real content can be found. Mediumish template for Jekyll is compatible with Github pages, in fact even this demo is created with Github Pages and hosted with Github.</p>
+<div class="p-4 border border-1">
+<h5>Me pagar uma bera</h5>
 
-<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/wizard money.jpg" alt="wizard burning money" /></p>
-<h4>Documentation</h4>
+<p>Você me paga uma cerveja e recebe uma foto minha bebendo ela no seu e-mail. Leva no máximo 1 dia corrido.</p>
 
-<p>Please, read the docs <a href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/">here</a>.</p>
+<p class="mb-4"><img class="shadow-sm rounded-3" src="{{site.baseurl}}/assets/images/bebendocerveja.jpg" alt="Bebendo Cerveja" /></p>
 
-<h4>Questions or bug reports?</h4>
+<div class="text-center">
+<a href="https://go.perfectpay.com.br/PPU38CN2A9T" class="btn btn-primary">R$9,97</a>
+</div>
 
-<p>Head over to our <a href="https://github.com/wowthemesnet/mediumish-theme-jekyll">Github repository</a>!</p>
+
+</div>
+</div>
+<div class="col-md-4">
+<div class="p-4 border border-1">
+<h5>Me pagar uma pizza</h5>
+
+<p>Mema fita, você me paga uma pizza e recebe a foto dela no seu e-mail em 1 dia corrido.</p>
+
+<p class="mb-4"><img class="shadow-sm rounded-3" src="{{site.baseurl}}/assets/images/gatopizza.png" alt="Gato tocando uma pizza" /></p>
+
+<div class="text-center">
+<a href="https://go.perfectpay.com.br/PPU38CN2AA4" class="btn btn-primary">R$49,90</a>
+</div>
+
+
+</div>
 
 </div>
 
 <div class="col-md-4">
+<div class="p-4 border border-1">
+<h5>Você só ficou maluco mesmo</h5>
 
+<p>Não tive mais ideias, pelo visto eu vivo de cerveja e pizza. Mas vai que você ficou maluco e quer fazer a boa. Vai fundo.</p>
 
-<h5>Buy me a coffee</h5>
+<p class="mb-4"><img class="shadow-sm rounded-3" src="{{site.baseurl}}/assets/images/wizardmoney.jpg" alt="Bruxo queimando dinheiro" /></p>
 
-<p>Thank you for your support! Your donation helps me to maintain and improve <a target="_blank" href="https://github.com/wowthemesnet/mediumish-theme-jekyll">Mediumish <i class="fab fa-github"></i></a>.</p>
-
-<a target="_blank" href="https://www.wowthemes.net/donate/" class="btn btn-danger">Buy me a coffee</a> <a target="_blank" href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/" class="btn btn-warning">Documentation</a>
-
+<div class="text-center">
+<a href="https://go.perfectpay.com.br/PPU38CN2AAD" class="btn btn-primary">R$97,50</a>
 </div>
 
-<div class="col-md-4">
 
-
-<h5>Buy me a coffee</h5>
-
-<p>Thank you for your support! Your donation helps me to maintain and improve <a target="_blank" href="https://github.com/wowthemesnet/mediumish-theme-jekyll">Mediumish <i class="fab fa-github"></i></a>.</p>
-
-<a target="_blank" href="https://www.wowthemes.net/donate/" class="btn btn-danger">Buy me a coffee</a> <a target="_blank" href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/" class="btn btn-warning">Documentation</a>
+</div>
 
 </div>
 </div>

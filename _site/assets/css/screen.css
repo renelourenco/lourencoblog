@@ -171,7 +171,7 @@ section.recent-posts {
 
 .wrapfooter {
     font-size: .8rem;
-		
+	display:flex;
     align-items: center;
     margin-bottom: 15px;
 }
@@ -897,6 +897,15 @@ iframe {
 .lazyimg[data-srcset] {
     opacity: 0;
     transition: opacity .25s;
+}
+
+/**Alterações que fiz no bootstrap**/
+.lead
+{
+	border-bottom:1px solid rgba(0, 0, 0, .125);
+	margin-bottom:5px;
+	font-size:1.2rem;
+	padding-bottom:10px;
 }
 
 
