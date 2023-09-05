@@ -12,6 +12,7 @@ mailchimp-list: ''
 include: ["_pages"]
 permalink: /:title/
 gtag: "G-LNVTRREWHJ"
+gtm: "GTM-58B4XK25"
 
 # Authors
 authors:
