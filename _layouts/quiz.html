@@ -1,0 +1,1928 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vamos descobrir qual o seu tipo de pele?</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: auto; /* Alterado para min-height e incluída margem inferior */
+        margin-top: 20px;
+        margin-bottom: 20px; /* Espaço na margem inferior para acomodar os contêineres */
+        background-color: #caffff; /* Cor de fundo opcional */
+    }
+    div, #quiz-tipo-pele {
+        width: 100%; /* Alterado para 100% para preencher a largura da página */
+        max-width: 820px;
+        color: #000000;
+        font-family: "DM Sans", sans-serif;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 6px;
+        position: relative;
+    }
+    #quiz-tipo-pele .question-container,
+    #quiz-tipo-pele .result-container {
+        padding: 30px;
+        border-radius: 4px;
+        background-color: #8afffd;
+        box-shadow: 2px 4px 7px 0px rgba(83, 73, 66, 0.0509803922);
+        border: 1px solid #000000;
+    }
+    #quiz-tipo-pele .question-container,
+    #quiz-tipo-pele .result-container {
+        display: none;
+        opacity: 0;
+    }
+    #quiz-tipo-pele .start-container,
+    #quiz-tipo-pele .question-container,
+    #quiz-tipo-pele .question,
+    #quiz-tipo-pele .result-container {
+        transition: all 0.25s ease;
+    }
+    #quiz-tipo-pele .question-container .numbers {
+        position: absolute;
+        right: 40px;
+        top: 20px;
+        margin: 0;
+        font-size: 18px;
+    }
+    #quiz-tipo-pele .btn {
+        display: block;
+        min-width: 200px;
+        max-width: -webkit-max-content;
+        max-width: -moz-max-content;
+        max-width: max-content;
+        width: 100%;
+        margin: auto;
+        padding: 12px 24px;
+        border: 2px solid #000000;
+        background-color: #000000;
+        color: #8afffd;
+        font-size: 18px;
+        text-decoration: none;
+        cursor: pointer;
+        outline: none;
+        transition: all 0.15s ease;
+        text-transform: none;
+    }
+    #quiz-tipo-pele .btn:hover {
+        border-color: #ffffff;
+        background-color: #ffffff;
+    }
+    #quiz-tipo-pele .btn.btn-answer {
+        background-color: transparent;
+        color: #000000;
+        max-width: 420px;
+        max-width: 100%;
+        line-height: 1.4;
+        font-size: 14px;
+    }
+    #quiz-tipo-pele .btn.btn-answer:hover {
+        border-color: #000000;
+        background-color: #000000;
+        color: #8afffd;
+    }
+    #quiz-tipo-pele .btn.btn-back,
+    #quiz-tipo-pele .btn.btn-restart {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: transparent;
+        border-color: transparent;
+        padding: 0;
+        color: #000000;
+        gap: 12px;
+        margin: 40px 0 0;
+    }
+    #quiz-tipo-pele .btn.btn-back p,
+    #quiz-tipo-pele .btn.btn-restart p {
+        margin: 0;
+        line-height: 1;
+    }
+    #quiz-tipo-pele .btn.btn-back svg,
+    #quiz-tipo-pele .btn.btn-restart svg {
+        width: 30px;
+        fill: #000000;
+        transition: all 0.15s ease;
+    }
+    #quiz-tipo-pele .btn.btn-back:not([disabled]):hover,
+    #quiz-tipo-pele .btn.btn-restart:not([disabled]):hover {
+        color: #ffffff;
+    }
+    #quiz-tipo-pele .btn.btn-back:not([disabled]):hover svg,
+    #quiz-tipo-pele .btn.btn-restart:not([disabled]):hover svg {
+        fill: #ffffff;
+    }
+    #quiz-tipo-pele .btn.btn-back[disabled],
+    #quiz-tipo-pele .btn.btn-restart[disabled] {
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
+    #quiz-tipo-pele .answers {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        max-width: 420px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+    #quiz-tipo-pele .section-title {
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+    #quiz-tipo-pele .section-title .text {
+        margin: 3px 0 10px;
+        font-size: 18px;
+        font-weight: 600;
+        display: block;
+        text-transform: none;
+    }
+    #quiz-tipo-pele .section-desc {
+        max-width: 620px;
+        margin: auto;
+        opacity: 0.9;
+        font-size: 20px;
+    }
+    #quiz-tipo-pele .title {
+        margin: 50px auto;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.6;
+    }
+    #quiz-tipo-pele .result-letters {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1;
+    }
+    #quiz-tipo-pele .result-letters span {
+        display: block;
+        margin: 20px 0 0;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 1;
+    }
+    #quiz-tipo-pele .result-description {
+        max-width: 600px;
+        margin: 30px auto 40px;
+        font-size: 20px;
+    }
+    #quiz-tipo-pele .note {
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    @media (min-width: 576px) {
+        #quiz-tipo-pele .section-desc {
+            font-size: 16px;
+        }
+        #quiz-tipo-pele .btn.btn-answer {
+            font-size: 18px;
+        }
+    }
+    .esconder {
+        display: none !important;
+    }
+</style>
+
+<body>
+
+    <div id="quiz-tipo-pele">
+        <div class="start-container">
+            <p><span style="text-decoration: underline;"><strong>Gostaria conhecer o seu tipo de pele?</p>
+            <p><strong>Responda o questionário a seguir, leva apenas 10 minutos!</p>
+            <p></strong></span><br>Responda com calma as perguntas seguintes para que possa entender de fato o seu tipo de pele.</p>
+            <p>Possui base <strong>científica</strong> e portanto é mais extenso com<strong> 4 etapas.</strong></p>
+            <button class="btn btn-start">Iniciar quiz</button>
+        </div>
+    
+        <div class="question-container">
+            <p class="numbers"><span class="current">0</span> de <span class="total">1</span></p>
+            <p class="section-title">Sessão <span class="number"></span> <span class="text"></span></p>
+            <p class="section-desc"></p>
+    
+            <div class="question">
+                <p class="title"></p>
+    
+                <div class="answers">
+                    <button class="btn btn-answer" data-answer="a"></button>
+                    <button class="btn btn-answer" data-answer="b"></button>
+                    <button class="btn btn-answer" data-answer="c"></button>
+                    <button class="btn btn-answer" data-answer="d"></button>
+                    <button class="btn btn-answer" data-answer="e"></button>
+                </div>
+    
+                <p class="note"></p>
+            </div>
+    
+            <button class="btn btn-back" disabled="">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M177.5 98c-8.8-3.8-19-2-26 4.6l-144 136C2.7 243.1 0 249.4 0 256s2.7 12.9 7.5 17.4l144 136c7 6.6 17.2 8.4 26 4.6s14.5-12.5 14.5-22l0-88 288 0c17.7 0 32-14.3 32-32l0-32c0-17.7-14.3-32-32-32l-288 0 0-88c0-9.6-5.7-18.2-14.5-22z"></path>
+                </svg>
+    
+                <p>Voltar</p>
+            </button>
+        </div>
+    
+        <div class="result-container">
+            <div class="result-letters">
+                Parabéns! Você concluiu o quiz completo!<span></span>
+            </div>
+            
+            <div class="result-description">
+                <!-- The result description will be displayed here -->
+            </div>
+            
+            <div>
+                <p><strong>Lembre-se que estamos vivos e o seu tipo de pele pode variar ao longo do tempo e de acordo com seus cuidados, procedimentos e hábitos de vida.
+                </p>
+            </div>
+            
+
+            <button class="btn btn-restart">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M463.5 224H472c13.3 0 24-10.7 24-24V72c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2L413.4 96.6c-87.6-86.5-228.7-86.2-315.8 1c-87.5 87.5-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3c62.2-62.2 162.7-62.5 225.3-1L327 183c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8H463.5z"></path>
+                </svg>
+    
+                <p>Refazer</p>
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        // Conteúdo das questões com título, respostas e pontuações
+        const questoes = [
+            // **** Perguntas da Sessão 1 ****
+            {
+                title: "Após lavar o rosto, não aplique hidratante, filtro solar, tônico, pó ou qualquer nenhum outro produto. Depois de duas ou três horas, olhe o rosto no espelho sob boa iluminação. Como é a aparência geral da fronte (testa) e das bochechas?",
+                sectionTitle: "Oleosa (O) x Seca (D)",
+                answers: {
+                    a: { text: "Muito áspera, descamativa, sem brilho e sem “vida”", points: 1 },
+                    b: { text: "Sensação de tensão (estiramento).", points: 2 },
+                    c: { text: "Bem hidratada, sem brilho excessivo (sem refletir o brilho da luz).", points: 3 },
+                    d: { text: "Muito brilhante, refletindo o brilho da luz.", points: 4 },
+                }
+            },
+            {
+                title: "Em fotos, sua pele aparece brilhante:",
+                sectionTitle: "Oleosa (O) x Seca (D)",
+                answers: {
+                    a: { text: "Nunca ou você nunca notou.", points: 1 },
+                    b: { text: "Às vezes.", points: 2 },
+                    c: { text: "Frequentemente.", points: 3 },
+                    d: { text: "Sempre.", points: 4 },
+                }
+            },
+            {
+                title: "Duas ou três horas após a aplicação da base cosmética, mas sem pó, a aparência de sua maquiagem é:",
+                sectionTitle: "Oleosa (O) x Seca (D)",
+                answers: {
+                    a: { text: "Descamativa, encrostada.", points: 1 },
+                    b: { text: "Lisa, macia.", points: 2 },
+                    c: { text: "Brilhante.", points: 3 },
+                    d: { text: "Muito brilhante.", points: 4 },
+                    e: { text: "Nunca uso base.", points: 2.5 },
+                }
+            },
+            {
+                title: "Em meio ambiente com baixa umidade, se você não usar hidratante, nem filtro solar, sua pele do rosto:",
+                sectionTitle: "Oleosa (O) x Seca (D)",
+                answers: {
+                    a: { text: "Fica muito seca e craquelada (descamativa).", points: 1 },
+                    b: { text: "Fica com sensação de tensão (estiramento).", points: 2 },
+                    c: { text: "Fica normal.", points: 3 },
+                    d: { text: "Fica brilhante, ou nunca sinto que precisa de hidratante.", points: 4 },
+                    e: { text: "Não sei.", points: 2.5 },
+                }
+            },
+            {
+                title: "Olhe em um espelho de aumento. Quantos poros abertos e dilatados (tamanho de uma ponta de alfinete ou maior) você tem?",
+                sectionTitle: "Oleosa (O) x Seca (D)",
+                answers: {
+                    a: { text: "Nenhum.", points: 1 },
+                    b: { text: "Apenas um pouco na “zona T” (testa e nariz).", points: 2 },
+                    c: { text: "Muitos.", points: 3 },
+                    d: { text: "Uma quantidade exagerada!", points: 4 },
+                    e: { text: "Não sei.", points: 2.5 },
+                },
+                note: "Observe com atenção e só responda “Não sei” se não for possível outra resposta!)"
+            },
+            {
+                title: "Você classifica sua pele do rosto como:",
+                sectionTitle: "Oleosa (O) x Seca (D)",
+                answers: {
+                    a: { text: "Seca.", points: 1 },
+                    b: { text: "Normal.", points: 2 },
+                    c: { text: "Mista.", points: 3 },
+                    d: { text: "Oleosa.", points: 4 },
+                }
+            },
+            {
+                title: "Quando você usa sabonete comum que espuma e desengordura profundamente, a pele de seu rosto:",
+                sectionTitle: "Oleosa (O) x Seca (D)",
+                answers: {
+                    a: { text: "Fica seca ou craquelada.", points: 1 },
+                    b: { text: "Fica levemente ressecada, mas não fica craquelada nem descamativa.", points: 2 },
+                    c: { text: "Fica normal.", points: 3 },
+                    d: { text: "Fica oleosa.", points: 4 },
+                    e: { text: "Nunca uso sabonete, nem outros produtos semelhantes para lavar o rosto. (Se você age assim porque eles deixam sua pele muito ressecada, marque “a”).", points: 2.5 },
+                }
+            },
+            {
+                title: "Se você não usar hidratante, sua pele fica com sensação de tensão (estiramento):",
+                sectionTitle: "Oleosa (O) x Seca (D)",
+                answers: {
+                    a: { text: "Sempre.", points: 1 },
+                    b: { text: "Às vezes.", points: 2 },
+                    c: { text: "Raramente.", points: 3 },
+                    d: { text: "Nunca.", points: 4 },
+                }
+            },
+            {
+                title: "Você tem poros obstruídos (com pontos escuros: cravos escuros ou pontos claros: cravos brancos):",
+                sectionTitle: "Oleosa (O) x Seca (D)",
+                answers: {
+                    a: { text: "Nunca.", points: 1 },
+                    b: { text: "Raramente.", points: 2 },
+                    c: { text: "Algumas vezes.", points: 3 },
+                    d: { text: "Sempre.", points: 4 },
+                }
+            },
+            {
+                title: "Sua pele é oleosa na “zona T” (testa e nariz):",
+                sectionTitle: "Oleosa (O) x Seca (D)",
+                answers: {
+                    a: { text: "Nunca.", points: 1 },
+                    b: { text: "Às vezes.", points: 2 },
+                    c: { text: "Frequentemente.", points: 3 },
+                    d: { text: "Sempre.", points: 4 },
+                }
+            },
+            {
+                title: "Duas ou três horas após aplicar hidratante, como ficam suas bochechas?",
+                sectionTitle: "Oleosa (O) x Seca (D)",
+                answers: {
+                    a: { text: "Muito ásperas, descamativas, sem brilho e sem “vida”.", points: 1 },
+                    b: { text: "Lisas, macias.", points: 2 },
+                    c: { text: "Bem hidratadas, sem brilho excessivo (sem refletir o brilho da luz).", points: 3 },
+                    d: { text: "Brilhantes e lisas, ou nunca uso hidratante.", points: 4 },
+                }
+            },
+
+            // **** Perguntas da Sessão 2 ****
+            {
+                title: "Você apresenta pápulas (“bolinhas”) vermelhas em sua pele:",
+                sectionTitle: "Sensível (S) x Resistência (R)",
+                answers: {
+                    a: { text: "Nunca.", points: 1 },
+                    b: { text: "Raramente.", points: 2 },
+                    c: { text: "Pelo menos uma vez por mês.", points: 3 },
+                    d: { text: "Pelo menos uma vez por semana.", points: 4 },
+
+                }
+            },
+            {
+                title: "Produtos para cuidado com a pele (incluindo sabonetes, hidratantes, tônicos e maquiagem) causam irritação, coceira, vermelhidão, ardência ou “alergia” em sua pele:",
+                sectionTitle: "Sensível (S) x Resistência (R)",
+                answers: {
+                    a: { text: "Nunca.", points: 1 },
+                    b: { text: "Às vezes.", points: 2 },
+                    c: { text: "Frequentemente.", points: 3 },
+                    d: { text: "Sempre.", points: 4 },
+                    e: { text: "Não uso produtos em meu rosto.", points: 2.5 },
+                },
+                note: "Responda “Sempre” se você não usa esses produtos porque causam os problemas descritos"
+            },
+            {
+                title: "Você já teve diagnóstico de acne ou rosácea:",
+                sectionTitle: "Sensível (S) x Resistência (R)",
+                answers: {
+                    a: { text: "Não.", points: 1 },
+                    b: { text: "Pessoas já falaram que tenho.", points: 2 },
+                    c: { text: "Sim.", points: 3 },
+                    d: { text: "Sim, um caso grave.", points: 4 },
+                    e: { text: "Não tenho certeza.", points: 2.5 },
+                }
+            },
+            {
+                title: "Você tem “alergia” quando usa bijuterias ou jóias que não sejam somente ouro 18 quilates:",
+                sectionTitle: "Sensível (S) x Resistência (R)",
+                answers: {
+                    a: { text: "Nunca.", points: 1 },
+                    b: { text: "Raramente.", points: 2 },
+                    c: { text: "Frequentemente.", points: 3 },
+                    d: { text: "Sempre.", points: 4 },
+                    e: { text: "Não tenho certeza.", points: 2.5 },
+                }
+            },
+            {
+                title: "Filtros solares fazem sua pele coçar, queimar, pinicar, ficar vermelha ou irritada:",
+                sectionTitle: "Sensível (S) x Resistência (R)",
+                answers: {
+                    a: { text: "Nunca.", points: 1 },
+                    b: { text: "Raramente.", points: 2 },
+                    c: { text: "Frequentemente.", points: 3 },
+                    d: { text: "Sempre.", points: 4 },
+                    e: { text: "Nunca uso filtro solar.", points: 2.5 },
+                }
+            },
+            {
+                title: "Você já teve diagnóstico de dermatite atópica, eczema ou dermatite de contato (inflamação ou erupções na pele)?",
+                sectionTitle: "Sensível (S) x Resistência (R)",
+                answers: {
+                    a: { text: "Não.", points: 1 },
+                    b: { text: "Pessoas dizem que tenho isso.", points: 2 },
+                    c: { text: "Sim", points: 3 },
+                    d: { text: "Sim, um caso grave.", points: 4 },
+                    e: { text: "Não tenho certeza.", points: 2.5 },
+                }
+            },
+            {
+                title: "Com que frequência você tem inflamação ou “alergia” no local onde usa anel?",
+                sectionTitle: "Sensível (S) x Resistência (R)",
+                answers: {
+                    a: { text: "Nunca.", points: 1 },
+                    b: { text: "Raramente.", points: 2 },
+                    c: { text: "Frequentemente.", points: 3 },
+                    d: { text: "Sempre.", points: 4 },
+                    e: { text: "Nunca uso anel.", points: 2.5 },
+                }
+            },
+            {
+                title: "Banho em banheira com sabonete espumante, uso de óleo para massagem ou de loções hidratantes causam coceira, ressecamento ou reações alérgicas em sua pele:",
+                sectionTitle: "Sensível (S) x Resistência (R)",
+                answers: {
+                    a: { text: "Nunca.", points: 1 },
+                    b: { text: "Raramente.", points: 2 },
+                    c: { text: "Às vezes.", points: 3 },
+                    d: { text: "Sempre.", points: 4 },
+                    e: { text: "Nunca uso produtos desse tipo", points: 2.5 },
+                },
+                note: "Responda “Sempre.” se você não usa esses produtos porque causam os problemas descritos"
+            },
+            {
+                title: "Você pode utilizar o sabonete comum de um hotel no rosto e corpo sem ter problemas de “alergia”?",
+                sectionTitle: "Sensível (S) x Resistência (R)",
+                answers: {
+                    a: { text: "Sim.", points: 1 },
+                    b: { text: "Na maioria das vezes não tenho problemas.", points: 2 },
+                    c: { text: "Não, minha pele coça, fica vermelha e irritada.", points: 3 },
+                    d: { text: "Não posso usar porque já tive vários problemas quando tentei!", points: 4 },
+                    e: { text: "Sempre levo meu sabonete, por isso não tenho certeza.", points: 2.5 },
+                },
+                note: "Responda “Sempre” se você não usa esses produtos porque causam os problemas descritos"
+            },
+            {
+                title: "Alguém em sua família tem diagnóstico de dermatite atópica, eczema, asma (bronquite) e/ou alergias?",
+                sectionTitle: "Sensível (S) x Resistência (R)",
+                answers: {
+                    a: { text: "Não.", points: 1 },
+                    b: { text: "Fiquei sabendo de uma pessoa na família.", points: 2 },
+                    c: { text: "Algumas pessoas na família.", points: 3 },
+                    d: { text: "Muitas pessoas da família têm dermatite atópica, eczema, asma e/ou alergias.", points: 4 },
+                    e: { text: "Não tenho certeza.", points: 2.5 },
+                }
+            },
+            {
+                title: "O que acontece se você usar sabão e/ou amaciante perfumado para lavar suas roupas ou produtos que diminuem a eletricidade estática do tecido na secadora de roupas?",
+                sectionTitle: "Sensível (S) x Resistência (R)",
+                answers: {
+                    a: { text: "Tudo bem com minha pele.", points: 1 },
+                    b: { text: "Minha pele fica levemente ressecada.", points: 2 },
+                    c: { text: "Minha pele coça.", points: 3 },
+                    d: { text: "Minha pele coça, fica irritada e com pápulas.", points: 4 },
+                    e: { text: "Não tenho certeza porque nunca usei esse tipo de produto.", points: 2.5 },
+                }
+            },
+            {
+                title: "Com que frequência sua pele e/ou pescoço ficam vermelhos após exercícios moderados, e/ou com estresse ou com fortes emoções (com raiva)?",
+                sectionTitle: "Sensível (S) x Resistência (R)",
+                answers: {
+                    a: { text: "Nunca.", points: 1 },
+                    b: { text: "Às vezes.", points: 2 },
+                    c: { text: "Frequentemente.", points: 3 },
+                    d: { text: "Sempre.", points: 4 },
+
+                }
+            },
+            {
+                title: "Com que frequência você tende a ficar vermelha ou ruborizada após ingerir bebidas alcoólicas?",
+                sectionTitle: "Sensível (S) x Resistência (R)",
+                answers: {
+                    a: { text: "Nunca.", points: 1 },
+                    b: { text: "Às vezes.", points: 2 },
+                    c: { text: "Frequentemente.", points: 3 },
+                    d: { text: "Sempre, ou não bebo por causa desse problema.", points: 4 },
+                    e: { text: "Nunca bebo álcool.", points: 2.5 },
+                }
+            },
+            {
+                title: "Com que frequência você tende a ficar vermelha ou ruborizada após comer alimentos apimentados ou muito quentes (temperatura)?",
+                sectionTitle: "Sensível (S) x Resistência (R)",
+                answers: {
+                    a: { text: "Nunca.", points: 1 },
+                    b: { text: "Às vezes.", points: 2 },
+                    c: { text: "Frequentemente.", points: 3 },
+                    d: { text: "Sempre.", points: 4 },
+                    e: { text: "Nunca como alimentos apimentados.", points: 2.5 },
+                },
+                note: "Se você não come alimentos apimentados ou comidas quentes porque tem esses sintomas, assinalar “Sempre.”"
+            },
+            {
+                title: "Quantos “vasinhos” vermelhos ou azulados você tem no rosto, incluindo o nariz (se você fez tratamento para eliminá-los, considere os que tinha antes)?",
+                sectionTitle: "Sensível (S) x Resistência (R)",
+                answers: {
+                    a: { text: "Nenhum.", points: 1 },
+                    b: { text: "Poucos (de um a três no rosto todo, incluindo o nariz).", points: 2 },
+                    c: { text: "Alguns (de quatro a seis no rosto todo, incluindo o nariz).", points: 3 },
+                    d: { text: "Muitos (mais de sete, incluindo o nariz).", points: 4 },
+
+                }
+            },
+            {
+                title: "Seu rosto aparece vermelho nas fotografias?",
+                sectionTitle: "Sensível (S) x Resistência (R)",
+                answers: {
+                    a: { text: "Nunca, ou nunca notei.", points: 1 },
+                    b: { text: "Às vezes.", points: 2 },
+                    c: { text: "Frequentemente.", points: 3 },
+                    d: { text: "Sempre.", points: 4 },
+
+                }
+            },
+            {
+                title: "As pessoas perguntam se você ficou no sol (porque fica vermelho como pimentão), mesmo quando você não ficou?",
+                sectionTitle: "Sensível (S) x Resistência (R)",
+                answers: {
+                    a: { text: "Nunca.", points: 1 },
+                    b: { text: "Às vezes.", points: 2 },
+                    c: { text: "Frequentemente.", points: 3 },
+                    d: { text: "Sempre.", points: 4 },
+                    e: { text: "Estou sempre bronzeado ou queimado de sol. (Atenção: isso não é bom! )", points: 2.5 },
+                }
+            },
+            {
+                title: "Ao usar maquiagem, filtro solar ou produtos para cuidados com a pele, você fica com vermelhidão, coceira ou irritação:",
+                sectionTitle: "Sensível (S) x Resistência (R)",
+                answers: {
+                    a: { text: "Nunca.", points: 1 },
+                    b: { text: "Às vezes.", points: 2 },
+                    c: { text: "Frequentemente.", points: 3 },
+                    d: { text: "Sempre.", points: 4 },
+                    e: { text: "Não uso esses produtos.", points: 2.5 },
+                },
+                note: "Se você não usa porque eles causam os problemas citados acima, assinale “Sempre.”"
+            },
+            {
+                title: "Algum médico já lhe falou que você tem acne, rosácea, dermatite de contato ou eczema?",
+                sectionTitle: "Sensível (S) x Resistência (R)",
+                answers: {
+                    a: { text: "Não", points: 0 },
+                    b: { text: "Meu médico não especialista", points: 2 },
+                    c: { text: "Meu dermatologista", points: 5 },
+                }
+            },
+
+            // **** Perguntas da Sessão 3 ****
+            {
+                title: "Se você tiver uma pápula(“bolinha vermelha”), uma“ espinha” ou um pêlo encravado, no local fica uma mancha marrom ou um ponto preto:",
+                sectionTitle: "Pigmentada (P) x Não-Pigmentada (N)",
+                answers: {
+                    a: { text: "Nunca.", points: 1 },
+                    b: { text: "Às vezes.", points: 2 },
+                    c: { text: "Frequentemente.", points: 3 },
+                    d: { text: "Sempre.", points: 4 },
+                    e: { text: "Nunca tive pápulas, “espinhas”, nem pêlo encravado.", points: 2.5 },
+                }
+            },
+            {
+                title: "Quando você sofre um corte ou ferimento, quanto tempo o local fica com uma marca marrom(não vermelha) ?",
+                sectionTitle: "Pigmentada (P) x Não-Pigmentada (N)",
+                answers: {
+                    a: { text: "Nunca fico com marcas marrons.", points: 1 },
+                    b: { text: "Uma semana.", points: 2 },
+                    c: { text: "Algumas semanas.", points: 3 },
+                    d: { text: "Meses.", points: 4 },
+
+                }
+            },
+            {
+                title: "Quantas manchas escuras você teve no rosto quando engravidou, ou tomou pílulas anticoncepcionais, ou fez terapia de reposição hormonal ?",
+                sectionTitle: "Pigmentada (P) x Não-Pigmentada (N)",
+                answers: {
+                    a: { text: "Nenhuma.", points: 1 },
+                    b: { text: "Uma.", points: 2 },
+                    c: { text: "Poucas.", points: 3 },
+                    d: { text: "Muitas.", points: 4 },
+                    e: { text: "Esta questão não se aplica no meu caso (porque sou homem, ou porque nunca engravidei, nem usei pílulas anticoncepcionais, nem fiz reposição hormonal, ou porque não sei quando apareceram as manchas escuras).", points: 2.5 },
+                }
+            },
+            {
+                title: "Você tem algum tipo de mancha escura no buço(pele sobre o lábio superior) ou bochechas ? Ou já teve alguma que foi tratada ?",
+                sectionTitle: "Pigmentada (P) x Não-Pigmentada (N)",
+                answers: {
+                    a: { text: "Não.", points: 1 },
+                    b: { text: "Não tenho certeza.", points: 2 },
+                    c: { text: "Sim, elas são (ou eram) levemente perceptíveis.", points: 3 },
+                    d: { text: "Sim, elas são (ou eram) muito perceptíveis.", points: 4 },
+
+                }
+            },
+            {
+                title: "Suas manchas escuras no rosto ficam piores quando você toma sol ?",
+                sectionTitle: "Pigmentada (P) x Não-Pigmentada (N)",
+                answers: {
+                    a: { text: "Não tenho manchas escuras.", points: 1 },
+                    b: { text: "Não tenho certeza.", points: 2 },
+                    c: { text: "Pioram um pouco.", points: 3 },
+                    d: { text: "Pioram muito.", points: 4 },
+                    e: { text: "Uso filtro solar todos os dias e nunca pego sol.", points: 2.5 },
+                },
+                note: "Se você usa proteção solar constante porque tem medo de ficar com a pele manchada ou com sardas, marcar “Pioram muito.”"
+            },
+            {
+                title: "Você já teve diagnóstico de melasma(manchas marrons no rosto), sardas brancas ou sardas marrons, ou melanoses solares(manchas de sol castanhas) no rosto ?",
+                sectionTitle: "Pigmentada (P) x Não-Pigmentada (N)",
+                answers: {
+                    a: { text: "Não.", points: 1 },
+                    b: { text: "Uma vez, mas saíram.", points: 2 },
+                    c: { text: "Sim.", points: 3 },
+                    d: { text: "Sim, um caso grave.", points: 4 },
+                    e: { text: "Não tenho certeza.", points: 2.5 },
+                }
+            },
+            {
+                title: "Você tem, ou já teve, manchas marrons(sardas ou manchas de sol) no rosto, colo, costas ou braços ?",
+                sectionTitle: "Pigmentada (P) x Não-Pigmentada (N)",
+                answers: {
+                    a: { text: "Não.", points: 1 },
+                    b: { text: "Sim, poucas (1-5).", points: 2 },
+                    c: { text: "Sim, muitas (6-15).", points: 3 },
+                    d: { text: "Sim, inúmeras (16 ou mais).", points: 4 },
+
+                }
+            },
+            {
+                title: "Quando sua pele é exposta ao sol pela primeira vez após muitos meses :",
+                sectionTitle: "Pigmentada (P) x Não-Pigmentada (N)",
+                answers: {
+                    a: { text: "Ela só queima.", points: 1 },
+                    b: { text: "Queima e depois fica levemente bronzeada.", points: 2 },
+                    c: { text: "Fica bronzeada.", points: 3 },
+                    d: { text: "Minha pele já é escura, por isso é difícil avaliar se ela fica escura.", points: 4 },
+
+                }
+            },
+            {
+                title: "O que acontece quando você se expõe o sol por vários dias consecutivos ?",
+                sectionTitle: "Pigmentada (P) x Não-Pigmentada (N)",
+                answers: {
+                    a: { text: "Somente fico vermelho.", points: 1 },
+                    b: { text: "Minha pele fica discretamente morena.", points: 2 },
+                    c: { text: "Minha pele fica muito morena.", points: 3 },
+                    d: { text: "Minha pele já é morena, por isso é difícil avaliar se fica mais morena.", points: 4 },
+                    e: { text: "Não tenho certeza. (Tente se lembrar de sua infância! Só responda “e” se não for possível outra resposta).", points: 2.5 },
+                }
+            },
+            {
+                title: "Quando você se expõe ao sol aparecem sardas(pequenas 1 - 2 mm) ?",
+                sectionTitle: "Pigmentada (P) x Não-Pigmentada (N)",
+                answers: {
+                    a: { text: "Não, nunca tenho sardas.", points: 1 },
+                    b: { text: "Aparecem poucas sardas por ano.", points: 2 },
+                    c: { text: "Aparecem sardas Frequentemente.", points: 3 },
+                    d: { text: "Minha pele é morena escura, por isso é difícil avaliar se aparecem sardas.", points: 4 },
+                    e: { text: "Nunca me exponho ao sol.", points: 2.5 },
+                }
+            },
+            {
+                title: "Algum de seus pais tem sardas ? Por favor, assinalar quantas.Se nenhum ou apenas um apresentar, responda às questões.Se os dois apresentarem, considere o que apresenta mais sardas para responder.",
+                sectionTitle: "Pigmentada (P) x Não-Pigmentada (N)",
+                answers: {
+                    a: { text: "Não.", points: 1 },
+                    b: { text: "Um pouco no rosto.", points: 2 },
+                    c: { text: "Muitas no rosto.", points: 3 },
+                    d: { text: "Muitas no rosto, colo, pescoço e braços.", points: 4 },
+                    e: { text: "Não tenho certeza.", points: 2.5 },
+                }
+            },
+            {
+                title: "Qual a cor natural de seu cabelo ? (Atenção: se já estiver“ branco”, considerar a cor anterior).",
+                sectionTitle: "Pigmentada (P) x Não-Pigmentada (N)",
+                answers: {
+                    a: { text: "Loiro.", points: 1 },
+                    b: { text: "Castanho", points: 2 },
+                    c: { text: "Preto.", points: 3 },
+                    d: { text: "Ruivo.", points: 4 },
+
+                }
+            },
+            {
+                title: "Você já teve melanoma(tipo de câncer de pele maligno) ou alguém em sua família já teve(parente“ de sangue”) ?",
+                sectionTitle: "Pigmentada (P) x Não-Pigmentada (N)",
+                answers: {
+                    a: { text: "Não.", points: 1 },
+                    b: { text: "Uma pessoa em minha família.", points: 2 },
+                    c: { text: "Mais de uma pessoa em minha família.", points: 3 },
+                    d: { text: "Sim.", points: 4 },
+                    e: { text: "Não tenho certeza.", points: 2.5 },
+                }
+            },
+            {
+                title: "Você tem manchas escuras na pele em área de exposição solar (rosto, braços, tornozelos?) ",
+                sectionTitle: "Pigmentada (P) x Não-Pigmentada (N)",
+                answers: {
+                    a: { text: "Não.", points: 0 },
+                    b: { text: "Sim", points: 5 }
+                }
+            },
+
+            // **** Perguntas da Sessão 4 ****
+            {
+                title: "Você tem rugas no rosto?",
+                sectionTitle: "Enrugada (W) x Firme (T)",
+                answers: {
+                    a: { text: "Não, mesmo quando faço expressões faciais (como sorrir ou franzir a testa).", points: 1 },
+                    b: { text: "Somente ao sorrir, franzir a testa ou outras expressões faciais.", points: 2 },
+                    c: { text: "Sim, ao fazer expressões faciais e algumas mesmo sem movimento.", points: 3 },
+                    d: { text: "As rugas estão presentes mesmo quando não estou sorrindo, franzindo a testa ou fazendo outras expressões faciais.", points: 4 },
+                }
+            },
+            {
+                title: "Quantos anos sua mãe aparenta (rosto) ou aparentava?",
+                sectionTitle: "Enrugada (W) x Firme (T)",
+                answers: {
+                    a: { text: "De 5 a 10 anos mais jovem que sua verdadeira idade.", points: 1 },
+                    b: { text: "Exatamente sua idade.", points: 2 },
+                    c: { text: "5 anos mais velha que sua verdadeira idade.", points: 3 },
+                    d: { text: "Mais de 5 anos que sua verdadeira idade.", points: 4 },
+                    e: { text: "Não-aplicável; sou adotado ou não me lembro.", points: 2.5 },
+                }
+            },
+            {
+                title: "Quantos anos seu pai aparenta (rosto) ou aparentava?",
+                sectionTitle: "Enrugada (W) x Firme (T)",
+                answers: {
+                    a: { text: "De 5 a 10 anos mais jovem que sua verdadeira idade.", points: 1 },
+                    b: { text: "Exatamente sua idade.", points: 2 },
+                    c: { text: "5 anos mais velha que sua verdadeira idade.", points: 3 },
+                    d: { text: "Mais de 5 anos que sua verdadeira idade.", points: 4 },
+                    e: { text: "Não-aplicável; sou adotado ou não me lembro.", points: 2.5 },
+                }
+            },
+            {
+                title: "Quantos anos sua avó materna aparenta (rosto) ou aparentava?",
+                sectionTitle: "Enrugada (W) x Firme (T)",
+                answers: {
+                    a: { text: "De 5 a 10 anos mais jovem que sua verdadeira idade.", points: 1 },
+                    b: { text: "Exatamente sua idade.", points: 2 },
+                    c: { text: "5 anos mais velha que sua verdadeira idade.", points: 3 },
+                    d: { text: "Mais de 5 anos que sua verdadeira idade.", points: 4 },
+                    e: { text: "Não-aplicável; sou adotado ou não me lembro.", points: 2.5 },
+                }
+            },
+            {
+                title: "Quantos anos seu avô materno aparenta (rosto) ou aparentava?",
+                sectionTitle: "Enrugada (W) x Firme (T)",
+                answers: {
+                    a: { text: "De 5 a 10 anos mais jovem que sua verdadeira idade.", points: 1 },
+                    b: { text: "Exatamente sua idade.", points: 2 },
+                    c: { text: "5 anos mais velha que sua verdadeira idade.", points: 3 },
+                    d: { text: "Mais de 5 anos que sua verdadeira idade.", points: 4 },
+                    e: { text: "Não-aplicável; sou adotado ou não me lembro.", points: 2.5 },
+                }
+            },
+            {
+                title: "Quantos anos sua avó paterna aparenta (rosto) ou aparentava?",
+                sectionTitle: "Enrugada (W) x Firme (T)",
+                answers: {
+                    a: { text: "De 5 a 10 anos mais jovem que sua verdadeira idade.", points: 1 },
+                    b: { text: "Exatamente sua idade.", points: 2 },
+                    c: { text: "5 anos mais velha que sua verdadeira idade.", points: 3 },
+                    d: { text: "Mais de 5 anos que sua verdadeira idade.", points: 4 },
+                    e: { text: "Não-aplicável; sou adotado ou não me lembro.", points: 2.5 },
+                }
+            },
+            {
+                title: "Quantos anos seu avô paterno aparenta (rosto) ou aparentava?",
+                sectionTitle: "Enrugada (W) x Firme (T)",
+                answers: {
+                    a: { text: "De 5 a 10 anos mais jovem que sua verdadeira idade.", points: 1 },
+                    b: { text: "Exatamente sua idade.", points: 2 },
+                    c: { text: "5 anos mais velha que sua verdadeira idade.", points: 3 },
+                    d: { text: "Mais de 5 anos que sua verdadeira idade.", points: 4 },
+                    e: { text: "Não-aplicável; sou adotado ou não me lembro.", points: 2.5 },
+                }
+            },
+            {
+                title: "Alguma vez você já bronzeou sua pele rotineiramente cerca de duas semanas ininterruptas ou mais por ano? Caso afirmativo, por quantos anos no total você fez ou faz isso? Por favor, considerar bronzeamento como todas as atividades que são realizadas em local ensolarado, como jogar tênis, pescar, jogar golfe, vôlei, ou qualquer outra atividade com exposição solar, a praia não é o único local onde se “pega sol”!",
+                sectionTitle: "Enrugada (W) x Firme (T)",
+                answers: {
+                    a: { text: "Nunca.", points: 1 },
+                    b: { text: "De 1 a 5 anos.", points: 2 },
+                    c: { text: "De 5 a 10 anos.", points: 3 },
+                    d: { text: "Mais de 10 anos.", points: 4 },
+                }
+            },
+            {
+                title: "Alguma vez em sua vida você já se bronzeou em ocasiões esporádicas duas semanas por ano ou mais? (Sim, as férias durante o verão também contam). Em caso afirmativo, qual a frequência:",
+                sectionTitle: "Enrugada (W) x Firme (T)",
+                answers: {
+                    a: { text: "Nunca.", points: 1 },
+                    b: { text: "De 1 a 5 anos.", points: 2 },
+                    c: { text: "De 5 a 10 anos.", points: 3 },
+                    d: { text: "Mais de 10 anos.", points: 4 },
+                }
+            },
+            {
+                title: "Baseando-se nos locais em que você já viveu (morou), quanta exposição solar você teve em sua vida?",
+                sectionTitle: "Enrugada (W) x Firme (T)",
+                answers: {
+                    a: { text: "Pouca, sempre morei em lugares com clima nublado e com pouca luz do sol.", points: 1 },
+                    b: { text: "Alguma, já morei tanto em lugares nublados e com pouca luz como em lugares mais ensolarados.", points: 2 },
+                    c: { text: "Moderada; morei em lugares razoavelmente ensolarados.", points: 3 },
+                    d: { text: "Muita; morei em lugares com clima tropical ou muito ensolarados.", points: 4 },
+                }
+            },
+            {
+                title: "Que idade você aparenta?",
+                sectionTitle: "Enrugada (W) x Firme (T)",
+                answers: {
+                    a: { text: "De 1 a 5 anos mais nova que sua idade.", points: 1 },
+                    b: { text: "Exatamente sua idade.", points: 2 },
+                    c: { text: "De 1 a 5 anos a mais que sua idade.", points: 3 },
+                    d: { text: "Mais de 5 anos a mais que sua idade.", points: 4 },
+                }
+            },
+            {
+                title: "Durante os últimos cinco anos, quanto você se bronzeou em atividades ao ar livre (intencionalmente ou não)?",
+                sectionTitle: "Enrugada (W) x Firme (T)",
+                answers: {
+                    a: { text: "Nunca.", points: 1 },
+                    b: { text: "Uma vez por mês.", points: 2 },
+                    c: { text: "Uma vez por semana.", points: 3 },
+                    d: { text: "Diariamente.", points: 4 },
+                }
+            },
+            {
+                title: "Com que frequência você faz bronzeamento artificial?",
+                sectionTitle: "Enrugada (W) x Firme (T)",
+                answers: {
+                    a: { text: "Nunca.", points: 1 },
+                    b: { text: "De 1 a 5 vezes.", points: 2 },
+                    c: { text: "De 5 a 10 vezes.", points: 3 },
+                    d: { text: "Muitas vezes.", points: 4 },
+                }
+            },
+            {
+                title: "Durante a sua vida, quantos cigarros você já fumou (considerar também exposição passiva):",
+                sectionTitle: "Enrugada (W) x Firme (T)",
+                answers: {
+                    a: { text: "Nenhum.", points: 1 },
+                    b: { text: "Poucos maços.", points: 2 },
+                    c: { text: "Muitos ou vários maços.", points: 3 },
+                    d: { text: "Fumo todos os dias.", points: 4 },
+                    e: { text: "Nunca fumei, mas sempre estive exposto passivamente ao cigarro (“fumante passivo”)", points: 2.5 },
+                }
+            },
+            {
+                title: "Por favor, descreva a poluição do ar no local onde você vive.",
+                sectionTitle: "Enrugada (W) x Firme (T)",
+                answers: {
+                    a: { text: "O ar é limpo e fresco.", points: 1 },
+                    b: { text: "Na maior parte do ano, mas não durante o ano todo, moro num local com ar limpo e fresco.", points: 2 },
+                    c: { text: "O ar é um pouco poluído.", points: 3 },
+                    d: { text: "O ar é muito poluído.", points: 4 },
+                }
+            },
+            {
+                title: "Considere quanto você já utilizou de produtos para cuidado com a pele contendo vitamina A, ácido retinóico ou derivados (como: retinol, retinova, retin-A, tazaroteno, adapaleno, differin, dalap ou produtos manipulados com ácido retinóico):",
+                sectionTitle: "Enrugada (W) x Firme (T)",
+                answers: {
+                    a: { text: "Muitos anos.", points: 1 },
+                    b: { text: "Ocasionalmente.", points: 2 },
+                    c: { text: "Uma vez (por exemplo: tratamento de acne na adolescência ou adulto jovem).", points: 3 },
+                    d: { text: "Nunca.", points: 4 },
+                }
+            },
+            {
+                title: "Com que frequência você come frutas, legumes e verduras:",
+                sectionTitle: "Enrugada (W) x Firme (T)",
+                answers: {
+                    a: { text: "Em todas as refeições.", points: 1 },
+                    b: { text: "Uma vez por dia.", points: 2 },
+                    c: { text: "Ocasionalmente.", points: 3 },
+                    d: { text: "Nunca.", points: 4 },
+                }
+            },
+            {
+                title: "Durante a sua vida, que porcentagem de sua dieta consistiu em frutas, legumes e verduras?",
+                sectionTitle: "Enrugada (W) x Firme (T)",
+                answers: {
+                    a: { text: "75 – 100 %.", points: 1 },
+                    b: { text: "25 – 75 %.", points: 2 },
+                    c: { text: "10 – 25 %.", points: 3 },
+                    d: { text: "0 – 10 %.", points: 4 },
+                },
+                note: "Não considerar suco de fruta industrializado, só vale se for fresco"
+            },
+            {
+                title: "Qual a cor natural de sua pele? (Considere pele as áreas cobertas e sem bronzeado, nem autobronzeamento).",
+                sectionTitle: "Enrugada (W) x Firme (T)",
+                answers: {
+                    a: { text: "Negra.", points: 1 },
+                    b: { text: "Média.", points: 2 },
+                    c: { text: "Clara.", points: 3 },
+                    d: { text: "Muito clara.", points: 4 },
+                }
+            },
+            {
+                title: "Qual sua etnia?",
+                sectionTitle: "Enrugada (W) x Firme (T)",
+                answers: {
+                    a: { text: "Africano ou descendente de africanos, caribenho, negro.", points: 1 },
+                    b: { text: "Asiático, indígena, mediterrâneo, árabe, indiano.", points: 2 },
+                    c: { text: "Latino-americano, hispânico.", points: 3 },
+                    d: { text: "Caucasiano, branco.", points: 4 },
+                }
+            },
+            {
+                title: "Você tem 65 anos ou mais? ",
+                sectionTitle: "Enrugada (W) x Firme (T)",
+                answers: {
+                    a: { text: "Não", points: 0 },
+                    b: { text: "Sim", points: 5 }
+                }
+            },
+        ];
+
+        // Aqui vai o título das seções e a descrição
+        const questoesSecoes = {
+            "Oleosa (O) x Seca (D)": "Esta seção avalia a produção de óleo da pele e a hidratação. Estudos mostram que a percepção que as pessoas têm se sua pele é oleosa ou seca geralmente está incorreta. Não permita que seus preconceitos ou que outras pessoas pensam ou falam sobre sua pele interfira em suas respostas.",
+
+            "Sensível (S) x Resistência (R)": "Esta seção avaliará a tendência de sua pele a desenvolver espinhas, vermelhidão, rubor, coceira, todos, sinais de pele sensível.",
+
+            "Pigmentada (P) x Não-Pigmentada (N)": "Esta seção avaliará a tendência de sua pele de formar melanina, um pigmento que produz tons escuros na pele, assim como todas as manchas marrons, sardas e as áreas escuras pós-trauma. A melanina também ajuda você a ficar bronzeado ao invés de se queimar.",
+
+            "Enrugada (W) x Firme (T)": "Esta seção avaliará sua tendência a enrugar e quão enrugada você está no momento. Algumas das minhas pacientes confessaram ter trapaceado. Não o faça!",
+        }
+
+        // Cada resultado e descrição
+        const resultadoInfo = {
+            OSNW: {
+                sections: [
+                {
+                    title: "Seu tipo de pele é:",
+                    points: ["Tendência a pele oleosa, sensível, não pigmentada e com tendência a rugas."]
+                },
+                {
+                    title: "Características:",
+                    points: [
+                    "Queima ao invés de bronzear, pele avermelhada com poros dilatados e rugas precoces."
+                    ]
+                },
+                {
+                    title: "O que evitar:",
+                    points: [
+                    "Produtos a base de álcool ou que contenham ácidos fortes.",
+                    "Sabonetes e esfoliantes abrasivos."
+                    ]
+                },
+                {
+                    title: "O que usar:",
+                    points: [
+                    "Sabonetes suaves para pele com tendência a oleosidade.",
+                    "Cremes antiidade com ácidos fracos e antioxidantes.",
+                    "Produtos para controle da oleosidade.",
+                    "Hidratantes leves não comedogênicos com proteção de barreira cutânea, ação calmante e anti inflamatória.",
+                    "Filtros solares de amplo espectro de proteção e livres de óleo."
+                    ]
+                },
+                {
+                    title: "Procedimentos estéticos recomendados:",
+                    points: [
+                    "Toxina botulínica para tratamento e prevenção de rugas dinâmicas.",
+                    "Preenchimento de rugas e vincos com ácido hialurônico e ancoragem da face para sustentação.",
+                    "Bioestimuladores de colágeno (Sculptra, Radiesse Plus) injetáveis associados ou não a tecnologias (ultrassom microfocado, radiofrequência) para tratamento e prevenção de flacidez e desabamento da face.",
+                    "Laser para rejuvenescimento e para poros dilatados.",
+                    "Microagulhamentos com drug delivery para tratamento de oleosidade e poros e rejuvenescimento.",
+                    "Peeling químicos periódicos para controle de oleosidade e tratamento de linhas finas.",
+                    "Máscaras faciais antioleosidade e anti-aging."
+                    ]
+                },
+                ]
+            },
+
+            OSNT: {
+                sections: [
+                {
+                    title: "Seu tipo de pele é:",
+                    points: ["Tendência a pele oleosa, sensível, não pigmentada e firme."]
+                },
+                {
+                    title: "Características:",
+                    points: [
+                    "Fica vermelha com mais facilidade.",
+                    "Tendência a vasinhos e/ou manchas vermelhas descamativas nos cantos do nariz, sobrancelhas e/ou atrás das orelhas.",
+                    "Rugas visíveis após os 35 anos."
+                    ]
+                },
+                {
+                    title: "O que evitar:",
+                    points: [
+                    "Produtos a base de álcool e ácidos fortes.",
+                    "Sabonetes e esfoliantes abrasivos."
+                    ]
+                },
+                {
+                    title: "O que usar:",
+                    points: [
+                    "Sabonetes suaves para pele com tendência a oleosidade.",
+                    "Cremes específicos para o controle da dermatite ao redor do nariz e das sobrancelhas.",
+                    "Hidratantes leves não comedogênicos com proteção de barreira cutânea, ação calmante e anti inflamatória para acalmar a vermelhidão.",
+                    "Formulações acrescidas de antioxidantes.",
+                    "Produtos para controle da oleosidade de forma suave.",
+                    "Filtros solares livres de óleo."
+                    ]
+                },
+                {
+                    title: "Procedimentos estéticos recomendados:",
+                    points: [
+                    "Toxina botulínica para tratamento e prevenção de rugas dinâmicas, conforme necessidade.",
+                    "Preenchimento de rugas e vincos com ácido hialurônico e ancoragem da face para sustentação, conforme necessidade.",
+                    "Bioestimuladores de colágeno (Sculptra, Radiesse Plus) injetáveis associados ou não a tecnologias (ultrassom microfocado, radiofrequência) para tratamento e prevenção de flacidez e desabamento da face, conforme necessidade.",
+                    "Laser específico para rejuvenescimento associado ou não a drug delivery, conforme necessidade.",
+                    "Laser específico para tratamento de vasinhos e manchas avermelhadas na face.",
+                    "Laser específico para redução de poros.",
+                    "Microagulhamento com drug delivery específico para oleosidade e redução de poros.",
+                    "Peeling químico específico para melhorar a textura da pele, controle de poros e tratamento de rugas finas periodicamente, sob supervisão de dermatologista.",
+                    "Máscaras faciais anti oleosidade e calmantes."
+                    ]
+                }
+                ]
+            },
+
+            OSPW: {
+                sections: [
+                {
+                    title: "Seu tipo de pele é:",
+                    points: ["Tendência a pele oleosa, sensível, pigmentada e com tendência a rugas."]
+                },
+                {
+                    title: "Características:",
+                    points: [
+                    "Bronzeia fácil, depois surgem manchas marrons ou esbranquiçadas.",
+                    "Pode ter acne e dermatite (vermelhidão e descamação ao redor dos cantos do nariz, sobrancelhas e atrás das orelhas).",
+                    "Rugas e sinais aparentes já a partir dos 25 anos"
+                    ],
+                },
+                {
+                    title: "O que evitar:",
+                    points: [
+                    "Produtos a base de álcool e ácidos fortes.",
+                    "Uso de antibióticos ou antisépticos de forma indiscriminada.",
+                    "Sabonetes e esfoliantes abrasivos.",
+                    "Filtros solares que contenham compostos como avobenzona e benzofenona, pelo risco de dermatite de contato e pigmentação."
+                    ],
+                },
+                {
+                    title: "O que usar:",
+                    points: [
+                    "Sabonetes suaves para pele oleosa.",
+                    "Cremes específicos para o controle da dermatite ao redor do nariz e das sobrancelhas.",
+                    "Produtos para controle da oleosidade não agressivos..",
+                    "Produtos antiidade com ácidos fracos, antioxidantes e clareadores ou uniformizares.",
+                    "Hidratantes leves com proteção de barreira cutânea, ação calmante e anti inflamatória.",
+                    "Filtros solares de alta cobertura, livres de óleo e amplo espectro de proteção que forma uma barreira protetora contra os raios solares e a luz visível."
+                    ],
+                },
+                {
+                    title: "Procedimentos estéticos recomendados:",
+                    points: [
+                    "Toxina botulínica para tratamento e prevenção de rugas dinâmicas.",
+                    "Preenchimento de rugas e vincos com ácido hialurônico e ancoragem da face para sustentação.",
+                    "Bioestimuladores de colágeno (Sculptra, Radiesse Plus) injetáveis associados ou não a tecnologias (ultrassom microfocado, radiofrequência) para tratamento e prevenção de flacidez e desabamento da face.",
+                    "Microagulhamento com drug delivery específico ou MMP para rejuvenescimento e clareamento de manchas da pele do rostos são preferíveis do que o Laser.",
+                    "Laser específico de para manchas dentre os outros tipos de laser existentes.",
+                    "Laser para rejuvenescimento associado ou não a drug delivery.",
+                    "Peeling químico com ativos para antioleosidade, rejuvenescimento e clareamento de manchas, sob supervisão de dermatologista.",
+                    "Máscaras faciais calmantes quando necessário."
+                    ],
+                },
+                ],
+
+            },
+            
+            OSPT: {
+                sections: [
+                {
+                    title: "Seu tipo de pele é:",
+                    points: ["Tendência a pele oleosa, sensível, pigmentada e firme."]
+                },
+                {
+                    title: "Características:",
+                    points: [
+                    "Pele com tendência a acne inflamada e propensão a alergias.",
+                    "Nas pessoas claras, sardas e manchas de sol.",
+                    "Rugas ao redor dos 35 a 40 anos."
+                    ]
+                },
+                {
+                    title: "O que evitar:",
+                    points: [
+                    "Sabonetes esfoliantes abrasivos.",
+                    "Produtos a base de álcool e ácidos fortes.",
+                    "Filtros solares que contenham compostos específicos como avobenzona e benzofenona, pelo risco de dermatite de contato e pigmentação."
+                    ]
+                },
+                {
+                    title: "O que usar:",
+                    points: [
+                    "Sabonetes suaves para pele oleosa.",
+                    "Hidratantes leves com proteção de barreira cutânea, ação calmante e anti inflamatória.",
+                    "Cremes com ácidos fracos e clareadores ou uniformizadores para atenuar acne, rugas e manchas.",
+                    "Filtros solares de alta cobertura, livres de óleo e amplo espectro de proteção que formam uma barreira protetora contra os raios solares e a luz visível."
+                    ]
+                },
+                {
+                    title: "Procedimentos estéticos recomendados:",
+                    points: [
+                    "Microagulhamento com drug delivery específicos ou MMP para tratamento de poros, oleosidade e clareamento de manchas do rosto.",
+                    "Laser específico de para manchas dentre os outros tipos de laser existentes.",
+                    "Peeling químico com ativos para antioleosidade e clareamento de manchas, sob supervisão de dermatologista.",
+                    "Toxina botulínica para tratamento e prevenção de rugas dinâmicas, de acordo com a necessidade.",
+                    "Preenchimento de rugas e vincos com ácido hialurônico e ancoragem da face para sustentação, de acordo com a necessidade.",
+                    "Bioestimuladores de colágeno (Sculptra, Radiesse Plus) injetáveis associados ou não a tecnologias (ultrassom microfocado, radiofrequência) para tratamento e prevenção de flacidez e desabamento da face, de acordo com a necessidade.",
+                    "Máscaras faciais antioleosidade e calmantes."
+                    ]
+                }
+                ]
+            },
+
+            ORPW: {
+                sections: [
+                {
+                    title: "Seu tipo de pele é:",
+                    points: ["Tendência a pele oleosa, resistente, pigmentada e com tendência a rugas."]
+                },
+                {
+                    title: "Características:",
+                    points: [
+                    "Pele brilhosa, com poros dilatados bem visíveis, acne esporadicamente, e facilidade a craquelar maquiagem.",
+                    "Pele que mancha com facilidade, e manchas de espinhas duram longo tempo.",
+                    "Rugas aparentes após os 25 a 30 anos."
+                    ]
+                },
+                {
+                    title: "O que evitar:",
+                    points: [
+                    "Cremes de venda livre, preferir produtos manipulados devido a maior concentração de ativos nessa pele que tem tendência envelhecimento precoce e tolera ativos mais potentes.",
+                    "Evitar cutucar a pele pois qualquer pequeno trauma há tendência de manchar."
+                    ]
+                },
+                {
+                    title: "O que usar:",
+                    points: [
+                    "Sabonetes que contenham ácidos para reduzir a oleosidade e ação de peeling diário.",
+                    "Cremes livres de óleo com ativos anti-envelhecimento efeito lifting em alta concentração.",
+                    "Ativos anti-agings à base de ácidos fortes.",
+                    "Hidratantes leves com proteção de barreira cutânea, ação calmante e anti inflamatória.",
+                    "Filtros solares de alta cobertura, livres de óleo e amplo espectro de proteção que formam uma barreira protetora contra os raios solares e a luz visível."
+                    ]
+                },
+                {
+                    title: "Procedimentos estéticos recomendados:",
+                    points: [
+                    "Toxina botulínica para tratamento e prevenção de rugas dinâmicas.",
+                    "Preenchimento de rugas e vincos com ácido hialurônico e ancoragem da face para sustentação.",
+                    "Bioestimuladores de colágeno (Sculptra, Radiesse Plus) injetáveis associados ou não a tecnologias (ultrassom microfocado, radiofrequência) para tratamento e prevenção de flacidez e desabamento da face.",
+                    "Microagulhamento com drug delivery específicos ou MMP para tratamento de poros, oleosidade, antienvelhecimento e clareamento de manchas do rosto.",
+                    "Peeling químico com ácidos para clarear manchas, periodicamente, sob supervisão de dermatologista.",
+                    "Laser específico para sardas dentre os outros tipos de laser existentes (evitar em pele morena a negra).",
+                    "Máscaras faciais antioleosidade e anti-aging."
+                    ]
+                }
+                ]
+            },
+
+            ORPT: {
+                sections: [
+                {
+                    title: "Seu tipo de pele é:",
+                    points: ["Tendência a pele oleosa, resistente, pigmentada e firme."]
+                },
+                {
+                    title: "Características:",
+                    points: [
+                    "O rosto brilha ao longo do dia e em fotografias, poucas marcas de expressão e algumas lesões de acne. Mais comum em negros.",
+                    "Em pessoas com pele clara tem tendência a sardas.",
+                    "Rugas tardias, a partir dos 35 anos ou mais, de acordo com a cor da pele."
+                    ]
+                },
+                {
+                    title: "O que evitar:",
+                    points: [
+                    "Em pessoas morenas ou negras, tratamentos químicos ou a laser muito agressivos, pelo risco de pigmentação.",
+                    "Hidratantes pesados ao longo do dia.",
+                    "Filtro solar oleoso.",
+                    "Esfoliação mecânica agressiva pelo risco de manchas."
+                    ]
+                },
+                {
+                    title: "O que usar:",
+                    points: [
+                    "Sabonetes para controle da oleosidade.",
+                    "Vitaminas, ácidos e uniformizador/clareador para remover manchas e prevenir rugas, de preferência manipulados com alta concentração de ativos.",
+                    "Filtros solares de alta cobertura, livres de óleo e amplo espectro de proteção que formam uma barreira protetora contra os raios solares e a luz visível."
+                    ]
+                },
+                {
+                    title: "Procedimentos estéticos recomendados:",
+                    points: [
+                    "Peeling químicos para clarear manchas, periodicamente, sob supervisão de dermatologista.",
+                    "Microagulhamento com drug delivery específicos ou MMP para tratamento de poros, oleosidade, e clareamento de manchas do rosto.",
+                    "Toxina botulínica para tratamento e prevenção de rugas dinâmicas, conforme necessidade.",
+                    "Preenchimento de rugas e vincos com ácido hialurônico e ancoragem da face para sustentação, conforme necessidade.",
+                    "Bioestimuladores de colágeno (Sculptra, Radiesse Plus) injetáveis associados ou não a tecnologias (ultrassom microfocado, radiofrequência) para tratamento e prevenção de flacidez e desabamento da face, conforme necessidade.",
+                    "Laser específico de para sardas dentre os outros tipos de laser existentes (evitar em pele morena a negra).",
+                    "Máscaras faciais antioleosidade, clareadoras ou uniformizadoras."
+                    ]
+                }
+                ]
+            },
+            
+            ORNT: {
+                sections: [
+                {
+                    title: "Seu tipo de pele é:",
+                    points: ["Tendência a pele oleosa, resistente, não pigmentada e com tendência a rugas."]
+                },
+                {
+                    title: "Características:",
+                    points: [
+                    "Raramente manchas.",
+                    "Raramente irrita ou resseca com produtos.",
+                    "Dificilmente bronzeia, mas queima com mais facilidade.",
+                    "Tendência de poros mais abertos localizados.",
+                    "Rugas ao redor dos 25 a 30 anos."
+                    ]
+                },
+                {
+                    title: "O que evitar:",
+                    points: [
+                    "Hidratantes e cremes gordurosos.",
+                    "Preferir produtos manipulados livres de óleo e com concentração de ativos mais elevada."
+                    ]
+                },
+                {
+                    title: "O que usar:",
+                    points: [
+                    "Sabonetes com ácidos fortes de ação esfoliante diária para pele resistente com tendência a oleosidade.",
+                    "Manipulados com ácidos mais fortes com intuito de prevenção de envelhecimento precoce e controle de oleosidade.",
+                    "Hidratantes leves sem óleo.",
+                    "Filtros solares com textura leve e livres de óleo de amplo espectro."
+                    ]
+                },
+                {
+                    title: "Procedimentos estéticos recomendados:",
+                    points: [
+                    "Aplicação de toxina botulínica para tratamento e prevenção de rugas dinâmicas.",
+                    "Preenchimento de rugas e vincos com ácido hialurônico e ancoragem da face para sustentação.",
+                    "Bioestimuladores de colágeno (Sculptra, Radiesse Plus) injetáveis associados a tecnologias (ultrassom microfocado, radiofrequência) para tratamento e prevenção de flacidez e desabamento da face.",
+                    "Laser para rejuvenescimento associado ou não a drug delivery.",
+                    "Microagulhamento com drug delivery químico para controle de oleosidade e fechamento de poros e ação anti-aging.",
+                    "Peeling químico específico para melhorar a textura da pele, controle de poros e tratamento de rugas finas periodicamente, sob supervisão de dermatologista.",
+                    "Máscaras faciais antioleosidade e anti-aging."
+                    ]
+                }
+                ]
+            },
+
+            ORNT: {
+                sections: [
+                {
+                    title: "Seu tipo de pele é:",
+                    points: ["Tendência a pele oleosa, resistente, não pigmentada e firme."]
+                },
+                {
+                    title: "Características:",
+                    points: [
+                    "Raramente manchas, vermelhidão ou ressecamento",
+                    "Dificilmente bronzeia, queima com mais facilidade",
+                    "Rugas ao redor dos 40 anos"
+                    ]
+                },
+                {
+                    title: "O que evitar:",
+                    points: [
+                    "Lavagens excessivas",
+                    "Hidratantes e cremes gordurosos."
+                    ]
+                },
+                {
+                    title: "O que usar:",
+                    points: [
+                    "Sabonetes para pele com tendência a oleosidade diariamente com alta concentração de ativos.",
+                    "Cremes adstringentes à base de ácidos e substâncias antioleosidade.",
+                    "Formulações livres de óleo e com concentração de ativos mais elevada.",
+                    "Filtros solares com textura leve e livres de óleo."
+                    ]
+                },
+                {
+                    title: "Procedimentos estéticos recomendados:",
+                    points: [
+                    "Toxina botulínica para tratamento e prevenção de rugas dinâmicas, conforme necessidade.",
+                    "Preenchimento de rugas e vincos com ácido hialurônico e ancoragem da face para sustentação, conforme necessidade.",
+                    "Bioestimuladores de colágeno (Sculptra, Radiesse Plus) injetáveis associados ou não a tecnologias (ultrassom microfocado, radiofrequência) para tratamento e prevenção de flacidez e desabamento da face, conforme necessidade.",
+                    "Laser para rejuvenescimento associado ou não a drug delivery, conforme necessidade.",
+                    "Laser para redução de poros.",
+                    "Microagulhamento com drug delivery específico para oleosidade e redução de poros e anti-aging.",
+                    "Peeling químico específico para melhorar a textura da pele, controle de poros e tratamento de rugas finas periodicamente, sob supervisão de dermatologista.",
+                    "Máscaras faciais anti oleosidade."
+                    ]
+                }
+                ]
+            },
+
+            DSNW: {
+                sections: [
+                {
+                    title: "Seu tipo de pele é:",
+                    points: ["Tendência a pele seca, sensível, pigmentada e com tendência a rugas."]
+                },
+                {
+                    title: "Características:",
+                    points: [
+                    "É o tipo de pele mais difícil de ser tratado.",
+                    "Pele fina, delicada, com tendência a irritações, vermelhidão e descamação.",
+                    "Manchas residuais frequentes na pele após machucados ou cortes.",
+                    "Rugas que se acentuam com o ressecamento da pele."
+                    ]
+                },
+                {
+                    title: "O que evitar:",
+                    points: [
+                    "Adstringentes, produtos a base de álcool ou gel e ácidos fortes.",
+                    "Sabonetes abrasivos e esfoliantes, que a tornam ainda mais sensível."
+                    ]
+                },
+                {
+                    title: "O que usar:",
+                    points: [
+                    "Sabonetes syndets.",
+                    "Hidratantes com ativos calmantes antes de aplicar os cremes para aumentar sua tolerância.",
+                    "Hidratante ao longo do dia, principalmente após procedimentos.",
+                    "Cremes anti-idade e uniformizador ou clareador com ativos em baixa concentração para evitar a sensibilização.",
+                    "Filtros solares com ação anti-aging hidratante de amplo espectro de proteção que formam uma barreira protetora contra os raios solares e a luz visível."
+                    ]
+                },
+                {
+                    title: "Procedimentos estéticos recomendados:",
+                    points: [
+                    "Toxina botulínica para tratamento e prevenção de rugas dinâmicas.",
+                    "Preenchimento de rugas e vincos com ácido hialurônico e ancoragem da face para sustentação.",
+                    "Bioestimuladores de colágeno (Sculptra, Radiesse Plus) injetáveis associados ou não a tecnologias (ultrassom microfocado, radiofrequência) para tratamento e prevenção de flacidez e desabamento da face.",
+                    "Laser para rejuvenescimento associado ou não a drug delivery anti-aging e hidratante.",
+                    "Laser para manchas associado ou não a drug delivery clareador, conforme necessidade.",
+                    "Microagulhamento com drug delivery específico para estímulo de colágeno e hidratação da pele.",
+                    "Peeling químico suaves para melhorar a textura da pele e controle de poros, e tratamento de rugas finas periodicamente, sob supervisão de dermatologista.",
+                    "Skinbooster para hidratação profunda e tratamento de linhas finas.",
+                    "Máscaras faciais hidratantes e calmantes e clareadoras."
+                    ]
+                }
+                ]
+            },
+
+            DSPT: {
+                sections: [
+                {
+                    title: "Seu tipo de pele é:",
+                    points: ["Tendência a pele seca, sensível, pigmentada e firme."]
+                },
+                {
+                    title: "Características:",
+                    points: [
+                    "Propensa a dermatites e descamações.",
+                    "Pode ter manchas ásperas e grossas no rosto e no pescoço, ressecamento das mãos e pálpebras escuras.",
+                    "Sinais e linhas de expressão ao sorrir ou franzir a testa que se acentuam com o ressecamento da pele."
+                    ]
+                },
+                {
+                    title: "O que evitar:",
+                    points: [
+                    "Adstringentes, produtos a base de álcool ou gel e ácidos fortes.",
+                    "Sabonetes abrasivos e esfoliantes, que a tornam ainda mais sensível."
+                    ]
+                },
+                {
+                    title: "O que usar:",
+                    points: [
+                    "Sabonetes syndets e sabonetes uniformizador ou clareador.",
+                    "Hidratantes com ativos calmantes antes de aplicar os cremes para aumentar sua tolerância.",
+                    "Hidratante ao longo do dia, principalmente após procedimentos.",
+                    "Cremes hidratantes e ácidos uniformizador ou clareador leves para evitar a sensibilização.",
+                    "Filtros solares com ação hidratante de amplo espectro de proteção que formam uma barreira protetora contra os raios solares e a luz visível."
+                    ]
+                },
+                {
+                    title: "Procedimentos estéticos recomendados:",
+                    points: [
+                    "Peeling químico com componentes específicos para tratamento de manchas, melhorar a textura da pele, controle de poros e tratamento de rugas finas periodicamente, sob supervisão de dermatologista.",
+                    "Microagulhamento com drug delivery específicos ou MMP para clareamento de manchas do rosto.",
+                    "Toxina botulínica para tratamento e prevenção de rugas dinâmicas, conforme necessidade.",
+                    "Preenchimento de rugas e vincos com ácido hialurônico e ancoragem da face para sustentação, conforme necessidade.",
+                    "Bioestimuladores de colágeno (Sculptra, Radiesse Plus) injetáveis associados ou não a tecnologias (ultrassom microfocado, radiofrequência) para tratamento e prevenção de flacidez e desabamento da face, conforme necessidade.",
+                    "Laser específico de para manchas.",
+                    "Skinbooster para hidratação profunda e tratamento de linhas finas.",
+                    "Máscaras faciais hidratantes e calmantes."
+                    ]
+                }
+                ]
+            },
+
+            DSPW: {
+                sections: [
+                {
+                    title: "Seu tipo de pele é:",
+                    points: ["Tendência a pele seca, sensível, pigmentada e com tendência a rugas."]
+                },
+                {
+                    title: "Características:",
+                    points: [
+                    "É o tipo de pele mais difícil de ser tratado.",
+                    "Pele fina, delicada, com tendência a irritações, vermelhidão e descamação.",
+                    "Manchas residuais frequentes na pele após machucados ou cortes.",
+                    "Rugas que se acentuam com o ressecamento da pele."
+                    ]
+                },
+                {
+                    title: "O que evitar:",
+                    points: [
+                    "Adstringentes, produtos a base de álcool ou gel e ácidos fortes.",
+                    "Sabonetes abrasivos e esfoliantes, que a tornam ainda mais sensível."
+                    ]
+                },
+                {
+                    title: "O que usar:",
+                    points: [
+                    "Sabonetes syndets.",
+                    "Hidratantes com ativos calmantes antes de aplicar os cremes para aumentar sua tolerância.",
+                    "Hidratante ao longo do dia, principalmente após procedimentos.",
+                    "Cremes anti-idade e uniformizador ou clareador com ativos em baixa concentração para evitar a sensibilização.",
+                    "Filtros solares com ação anti-aging hidratante de amplo espectro de proteção que forma uma barreira protetora contra os raios solares e a luz visível."
+                    ]
+                },
+                {
+                    title: "Procedimentos estéticos recomendados:",
+                    points: [
+                    "Toxina botulínica para tratamento e prevenção de rugas dinâmicas.",
+                    "Preenchimento de rugas e vincos com ácido hialurônico e ancoragem da face para sustentação.",
+                    "Bioestimuladores de colágeno (Sculptra, Radiesse Plus) injetáveis associados ou não a tecnologias (ultrassom microfocado, radiofrequência) para tratamento e prevenção de flacidez e desabamento da face.",
+                    "Laser para rejuvenescimento associado ou não a drug delivery anti-aging e hidratante.",
+                    "Laser para manchas associado ou não a drug delivery clareador, conforme necessidade.",
+                    "Microagulhamento com drug delivery específico para estímulo de colágeno e hidratação da pele.",
+                    "Peeling químico suave para melhorar a textura da pele e controle de poros, e tratamento de rugas finas periodicamente, sob supervisão de dermatologista.",
+                    "Skinbooster para hidratação profunda e tratamento de linhas finas.",
+                    "Máscaras faciais hidratantes e calmantes e clareadoras."
+                    ]
+                }
+                ]
+            },
+
+            DSNT: {
+                sections: [
+                    {
+                        title: "Seu tipo de pele é:",
+                        points: ["Tendência a pele seca, sensível, não pigmentada e firme."]
+                    },
+                    {
+                        title: "Características:",
+                        points: [
+                            "Seca, em geral com descamações, vermelhidão e coceiras.",
+                            "Muito alérgica e com espinhas ocasionais.",
+                            "Rugas mais tardias que se acentuam com o ressecamento da pele."
+                        ]
+                    },
+                    {
+                        title: "O que evitar:",
+                        points: [
+                            "Produtos a base de gel alcoólico, adstringentes.",
+                            "Sabonetes abrasivos e esfoliantes agressivos.",
+                            "Produtos com ácidos fortes."
+                        ]
+                    },
+                    {
+                        title: "O que usar:",
+                        points: [
+                            "Sabonetes syndets ou sabonetes clareadores.",
+                            "Cremes com ação anti-inflamatória específicos, sob orientação médica.",
+                            "Hidratantes específicos de pele sensível com antioxidantes.",
+                            "Produtos com ativos não irritantes contra envelhecimento.",
+                            "Filtros solares hidratantes, com amplo espectro de proteção."
+                        ]
+                    },
+                    {
+                        title: "Procedimentos estéticos recomendados:",
+                        points: [
+                            "Toxina botulínica para tratamento e prevenção de rugas dinâmicas, de acordo com necessidade.",
+                            "Preenchimento de rugas e vincos com ácido hialurônico e ancoragem da face para sustentação, de acordo com necessidade.",
+                            "Bioestimuladores de colágeno (Sculptra, Radiesse Plus) injetáveis associados a tecnologias (ultrassom microfocado, radiofrequência) para tratamento e prevenção de flacidez e desabamento da face, de acordo com necessidade.",
+                            "Laser específicos para tratar vermelhidões.",
+                            "Laser para rejuvenescimento associado ou não a drug delivery, de acordo com necessidade.",
+                            "Microagulhamento com drug delivery específico para hidratação profunda da pele associado a antienvelhecimento.",
+                            "Skinbooster para hidratação profunda e tratamento de linhas finas.",
+                            "Peeling químico específico para melhorar a textura da pele, controle de poros e tratamento de rugas finas periodicamente, sob supervisão de dermatologista.",
+                            "Máscaras faciais hidratantes e calmantes."
+                        ]
+                    }
+                ]
+            },
+
+            DRPW: {
+                sections: [
+                    {
+                        title: "Seu tipo de pele é:",
+                        points: ["Tendência a pele seca, resistente, pigmentada e com tendência a rugas."]
+                    },
+                    {
+                        title: "Características:",
+                        points: [
+                            "Pele em geral sem acne, alergias, irritações.",
+                            "Produtos anti-aging de mercado com ação fraca ou sem ação.",
+                            "Bronzeia com facilidade.",
+                            "Rugas que se acentuam com o ressecamento da pele."
+                        ]
+                    },
+                    {
+                        title: "O que evitar:",
+                        points: [
+                            "Produtos em gel ou a base de álcool, sabonetes e loções adstringentes.",
+                            "Sabonetes abrasivos e esfoliação mecânica agressiva."
+                        ]
+                    },
+                    {
+                        title: "O que usar:",
+                        points: [
+                            "Sabonetes syndets ou sabonetes uniformizador ou clareador.",
+                            "Ácidos anti-idade, anti-marcas ou clareadores prescritos por dermatologistas, de preferência manipulados para maior ação em pele resistente e com tendência a manchas e envelhecimento.",
+                            "Cremes para o rosto e olhos com antioxidantes.",
+                            "Hidratantes potentes.",
+                            "Filtros solares de alta cobertura, livres de óleo e amplo espectro de proteção, com barreira protetora contra os raios solares e a luz visível."
+                        ]
+                    },
+                    {
+                        title: "Procedimentos estéticos recomendados:",
+                        points: [
+                            "Toxina botulínica para tratamento e prevenção de rugas dinâmicas.",
+                            "Preenchimento de rugas e vincos com ácido hialurônico e ancoragem da face para sustentação.",
+                            "Bioestimuladores de colágeno (Sculptra, Radiesse Plus) injetáveis associados ou não a tecnologias (ultrassom microfocado, radiofrequência) para tratamento e prevenção de flacidez e desabamento da face.",
+                            "Laser para rejuvenescimento associado ou não a drug delivery.",
+                            "Laser específico de para manchas dentre os outros tipos de laser existentes.",
+                            "Microagulhamento com drug delivery específico para clareamento da pele associado a antienvelhecimento.",
+                            "Peeling químico específico para tratamento de manchas, melhorar a textura da pele, controle de poros e tratamento de rugas finas periodicamente, sob supervisão de dermatologista.",
+                            "Skinbooster para hidratação profunda e tratamento de linhas finas.",
+                            "Máscaras faciais hidratantes."
+                        ]
+                    }
+                ]
+            },
+
+            DRPT: {
+                sections: [
+                    {
+                        title: "Seu tipo de pele é:",
+                        points: ["Tendência a pele seca, resistente, pigmentada e firme."]
+                    },
+                    {
+                        title: "Características:",
+                        points: [
+                            "Seca, com descamações no rosto e no pescoço.",
+                            "Áspera e nos joelhos e cotovelos.",
+                            "Sardas ou manchas de sol.",
+                            "Rugas mais tardias que se acentuam com o ressecamento da pele."
+                        ]
+                    },
+                    {
+                        title: "O que evitar:",
+                        points: [
+                            "Peelings profundos que podem acentuar as manchas escuras.",
+                            "Procedimentos a laser muito agressivos que podem acentuar as manchas escuras.",
+                            "Sabonetes abrasivos e esfoliação mecânica agressiva."
+                        ]
+                    },
+                    {
+                        title: "O que usar:",
+                        points: [
+                            "Sabonetes syndets e sabonetes uniformizador ou clareador.",
+                            "Hidratantes potentes.",
+                            "Cremes uniformizador ou clareadores prescritos por dermatologistas, de preferência manipulados para maior ação em pele resistente e com tendência a manchas.",
+                            "Cremes para o rosto e olhos com antioxidantes.",
+                            "Filtros solares hidratantes, de alta cobertura e com amplo espectro de proteção, com barreira protetora contra os raios solares e a luz visível."
+                        ]
+                    },
+                    {
+                        title: "Procedimentos estéticos recomendados:",
+                        points: [
+                            "Peeling químico específico para tratamento de manchas, melhorar a textura da pele, controle de poros e tratamento de rugas finas periodicamente, sob supervisão de dermatologista.",
+                            "Laser específico para manchas.",
+                            "Microagulhamento com drug delivery para manchas e hidratação da pele.",
+                            "Aplicação de toxina botulínica, de acordo com a necessidade.",
+                            "Preenchimento de rugas e vincos com ácido hialurônico e ancoragem da face para sustentação, de acordo com a necessidade.",
+                            "Bioestimuladores de colágeno (Sculptra, Radiesse Plus) injetáveis associados a tecnologias (ultrassom microfocado, radiofrequência) para tratamento e prevenção de flacidez e desabamento da face, de acordo com a necessidade.",
+                            "Laser para rejuvenescimento, de acordo com a necessidade.",
+                            "Skinbooster para hidratação profunda e tratamento de linhas finas."
+                        ]
+                    }
+                ]
+            },
+
+            DRNW: {
+                sections: [
+                    {
+                        title: "Seu tipo de pele é:",
+                        points: ["Tendência a pele seca, resistente, não pigmentada e com tendência a rugas."]
+                    },
+                    {
+                        title: "Características:",
+                        points: [
+                            "Pele bem clara, europeia, delicada, sem sardas ou manchas.",
+                            "Rugas que se acentuam com o ressecamento da pele."
+                        ]
+                    },
+                    {
+                        title: "O que evitar:",
+                        points: [
+                            "Produtos a base de gel alcoólico, adstringentes.",
+                            "Sabonetes abrasivos e esfoliantes agressivos."
+                        ]
+                    },
+                    {
+                        title: "O que usar:",
+                        points: [
+                            "Até os 30 anos, hidratação com produtos ricos em antioxidantes e cremes anti-rugas.",
+                            "A partir dessa idade, produtos a base de ácidos manipulados, com prescrição médica para potencializar resultados anti envelhecimento em pele resistente e ressecada.",
+                            "Filtros solares hidratantes, com amplo espectro de proteção."
+                        ]
+                    },
+                    {
+                        title: "Procedimentos estéticos recomendados:",
+                        points: [
+                            "Toxina botulínica para tratamento e prevenção de rugas dinâmicas.",
+                            "Preenchimento de rugas e vincos com ácido hialurônico e ancoragem da face para sustentação.",
+                            "Bioestimuladores de colágeno (Sculptra, Radiesse Plus) injetáveis associados a tecnologias (ultrassom microfocado, radiofrequência) para tratamento e prevenção de flacidez e desabamento da face.",
+                            "Laser para rejuvenescimento associado ou não a drug delivery.",
+                            "Microagulhamento com drug delivery específico para hidratação profunda da pele associado a antienvelhecimento.",
+                            "Skinbooster para hidratação profunda e tratamento de linhas finas.",
+                            "Peeling químico específico para melhorar a textura da pele, controle de poros e tratamento de rugas finas periodicamente, sob supervisão de dermatologista.",
+                            "Máscaras faciais hidratantes, calmantes e anti-aging."
+                        ]
+                    }
+                ]
+            },
+
+            DRNT: {
+                sections: [
+                    {
+                        title: "Seu tipo de pele é:",
+                        points: ["Tendência a pele seca, resistente, não pigmentada e firme."]
+                    },
+                    {
+                        title: "Características:",
+                        points: [
+                            "Mais próxima da pele ideal",
+                            "Pele com pouca tendência a acne, oleosidade e sardas",
+                            "Rugas mais tardias que se acentuam com o ressecamento da pele."
+                        ]
+                    },
+                    {
+                        title: "O que evitar:",
+                        points: [
+                            "Sabonetes de limpeza profunda",
+                            "Produtos a base de gel ou álcool",
+                            "Loções adstringentes"
+                        ]
+                    },
+                    {
+                        title: "O que usar:",
+                        points: [
+                            "Até os 35 anos, protetor solar e hidratantes com antioxidantes.",
+                            "A partir dessa idade:",
+                            "Produtos com ativos antioxidantes.",
+                            "Produtos com ácidos antirrugas.",
+                            "Filtros solares hidratantes, com amplo espectro de proteção."
+                        ]
+                    },
+                    {
+                        title: "Procedimentos estéticos recomendados:",
+                        points: [
+                            "Microagulhamento com drug delivery específico para hidratação profunda da pele associado a antienvelhecimento.",
+                            "Skinbooster para hidratação profunda e tratamento de linhas finas.",
+                            "Máscaras faciais hidratantes, calmantes e anti-aging.",
+                            "Toxina botulínica para tratamento e prevenção de rugas dinâmicas, de acordo com necessidade.",
+                            "Preenchimento de rugas e vincos com ácido hialurônico e ancoragem da face para sustentação, de acordo com necessidade.",
+                            "Bioestimuladores de colágeno (Sculptra, Radiesse Plus) injetáveis associados a tecnologias (ultrassom microfocado, radiofrequência) para tratamento e prevenção de flacidez e desabamento da face, de acordo com necessidade.",
+                            "Laser para rejuvenescimento associado ou não a drug delivery, de acordo com necessidade.",
+                            "Peeling químico específico para melhorar a textura da pele, controle de poros e tratamento de rugas finas periodicamente, sob supervisão de dermatologista.",
+                            "Máscaras faciais hidratantes."
+                        ]
+                    }
+                ]
+            },
+        }
+
+        // Não é necessário mexer daqui para baixo, se for mexer faça um backup do arquivo.
+        let currentQuestion = 0;
+        const totalQuestions = questoes.length;
+
+        const quizContainer = document.querySelector('#quiz-tipo-pele');
+        const questionContainer = document.querySelector('.question-container');
+        const startContainer = document.querySelector('.start-container');
+        const resultContainer = document.querySelector('.result-container');
+        const btnBack = document.querySelector('.btn-back');
+        const answerButtons = document.querySelectorAll('.answers button');
+
+
+        function nextQuestion() {
+            const choosedAnswer = this.getAttribute('data-answer');
+            questoes[currentQuestion].selectedPoints = questoes[currentQuestion].answers[choosedAnswer].points;
+
+            if(currentQuestion + 1 >= totalQuestions) {
+                console.log("All questions answered. Showing result.");
+                finishQuiz();
+            } else {
+                currentQuestion += 1;
+                console.log("Moving to the next question: " + currentQuestion);
+                setQuestion(currentQuestion);
+                scrollToQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if(currentQuestion - 1 < 0) return;
+
+            currentQuestion -= 1;
+
+            setQuestion(currentQuestion);
+        }
+
+        function updateBackBtnState() {
+            btnBack.disabled = currentQuestion <= 0;
+        }
+
+        function scrollToQuestion() {
+            const titleTopDistance = questionContainer.querySelector('.title').getBoundingClientRect().top;
+
+            if(titleTopDistance < 0) {
+                window.scrollTo({ top: window.pageYOffset + (titleTopDistance - 30), behavior: 'smooth' });
+            }
+        }
+
+        function setQuestion() {
+            updateBackBtnState();
+
+            const question = questoes[currentQuestion];
+            const switchedSection = question.sectionTitle !== questoes[currentQuestion - 1]?.sectionTitle;
+            const questionContent = questionContainer.querySelector('.question');
+            const questionNumber = questionContainer.querySelector('.numbers .current');
+            const questionSectionNumber = questionContainer.querySelector('.section-title span.number');
+            const questionSectionTitle = questionContainer.querySelector('.section-title span.text');
+            const questionSectionDesc = questionContainer.querySelector('.section-desc');
+            const questionTitle = questionContainer.querySelector('.title');
+            const answersNote = questionContainer.querySelector('.question .note');
+
+
+            switchedSection ?
+                questionContainer.style.opacity = 0 :
+                questionContent.style.opacity = 0;
+
+            setTimeout(() => {
+                questionNumber.innerText = currentQuestion + 1;
+                questionSectionNumber.innerText = Object.entries(questoesSecoes).findIndex(el => el[0] === question.sectionTitle) + 1;
+                questionSectionTitle.innerText = question.sectionTitle;
+                questionSectionDesc.innerText = questoesSecoes[question.sectionTitle];
+                questionTitle.innerText = question.title;
+                answersNote.innerHTML = question.note || "";
+
+                questionContainer.querySelectorAll('.btn-answer').forEach(btnAnswer => {
+                    const answerLetter = btnAnswer.getAttribute('data-answer');
+                    const btnText = question.answers[answerLetter]?.text || false;
+                    btnAnswer.innerText = btnText;
+
+                    if(btnText) btnAnswer.style.display = "block";
+                    else btnAnswer.style.display = "none";
+                })
+
+                switchedSection ?
+                    questionContainer.style.opacity = 1 :
+                    questionContent.style.opacity = 1;
+            }, 250);
+        }
+
+        function generateResult() {
+            const points = {};
+            for(let [key] of Object.entries(questoesSecoes)) {
+                points[key] = questoes.reduce((prev, question) => {
+                    return question.sectionTitle === key ? prev + question.selectedPoints : prev + 0;
+                }, 0);
+            }
+
+            const lettersResult = [];
+            for(let [key, point] of Object.entries(points)) {
+                let letter;
+                switch(key) {
+                    case "Oleosa (O) x Seca (D)":
+                        letter = point >= 27 ? "O" : "D";
+                        break;
+
+                    case "Sensível (S) x Resistência (R)":
+                        letter = point >= 30 ? "S" : "R";
+                        break;
+
+                    case "Pigmentada (P) x Não-Pigmentada (N)":
+                        letter = point >= 29 ? "P" : "N";
+                        break;
+
+                    case "Enrugada (W) x Firme (T)":
+                        letter = point >= 41 ? "W" : "T";
+                        break;
+                }
+                lettersResult.push(letter);
+            }
+
+            return lettersResult.join('');
+        }
+
+        function startQuiz() {
+            startContainer.style.opacity = 0;
+            resultContainer.style.opacity = 0;
+
+            currentQuestion = 0;
+            setQuestion();
+
+            setTimeout(() => {
+                startContainer.style.display = 'none';
+                resultContainer.style.display = 'none';
+
+                questionContainer.style.display = 'block';
+                setTimeout(() => {
+                    questionContainer.style.opacity = 1;
+                }, 10);
+            }, 250);
+        }
+
+        function finishQuiz() {
+            const resultElement = document.querySelector('.result-letters span');
+            const resultDesc = document.querySelector('.result-description');
+            const result = generateResult();
+
+
+
+            questionContainer.style.opacity = 0;
+
+            setTimeout(() => {
+                questionContainer.style.display = 'none';
+                resultElement.innerText = result;
+
+                            // Access the sections of the result
+                const sections = resultadoInfo[result].sections;
+
+                // Create HTML to display the sections
+                let descriptionHTML = '';
+                sections.forEach((section) => {
+                    descriptionHTML += `<h3><span style="text-decoration: underline;">${section.title}</h3>`;
+                    if (section.points) {
+                        section.points.forEach((point) => {
+                            descriptionHTML += `<p>${point}</p>`;
+                        });
+                    }
+                });
+
+                // Set the description in the result description element
+                resultDesc.innerHTML = descriptionHTML;
+
+                // Set the result description based on the resultadoInfo object
+                // resultDesc.innerText = resultadoInfo[result];
+
+                resultContainer.style.display = 'block';
+                resultContainer.style.opacity = 1;
+            }, 10);
+        }
+
+
+        document.querySelector('.numbers .total').innerText = totalQuestions;
+        quizContainer.querySelectorAll('.btn-start, .btn-restart').forEach(btn => btn.addEventListener('click', startQuiz));
+        answerButtons.forEach(button => button.addEventListener('click', nextQuestion));
+        btnBack.addEventListener('click', prevQuestion);
+        setQuestion();
+    </script>
+    </main>
+</body>
+</html>
