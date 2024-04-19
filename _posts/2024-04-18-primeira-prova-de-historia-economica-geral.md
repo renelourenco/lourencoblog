@@ -9,17 +9,33 @@ hidden: true
 ---
 Este é um resumo bastante condensado das aulas de História Econômica Geral para que eu salve as informações e use para estudar.
 
-## Aula 1
+## Aula 2 - Introdução à História Econômica 1
 ### Saes e Saes, Introdução
 
-A história econômica é um campo híbrio que se constitui da relação entre história e economia, a mesma descreve os esforços da humanidade em satisfazer suas necessidades materiais.
-Smith propõe que a Economia é uma esfera auutônoma da sociedade com cadeias e sistemas únicos.
-Antes, com a chama economia política clássica tivemos pensadores como David Ricardo e Say, mas a economia política trocou de nome para ciências econômicas após a revolução marginalista.
-A história econômica ganha espaço com a criação da Annallis, estudando a problemática econômica, os conceitos e categorias econômicas e se preocupando com o passado.
-Lembrando: Economy ≠ Economics ≠ Polictical Economy
-Para Smith, o mercado converte interesse privado em benefício alheio, não se trata de benevolência.
+A história econômica explora a relação entre história e economia, estudando os esforços humanos para atender às suas necessidades materiais.
 
-#### Afinal, o navio do futuro, com novas peças e itens é o mesmo que saiu em uma viagem de descoberta?
+*Evolução da Economia*
+
+Adam Smith propôs a economia como uma esfera independente com seus próprios sistemas.
+A economia política clássica (Ricardo, Say) deu origem às ciências econômicas após a revolução marginalista.
+
+*Surgimento da História Econômica*
+
+A revista Annallis se dedicou ao estudo dos problemas econômicos e conceitos históricos.
+A história econômica se preocupa com o passado, analisando as categorias econômicas e seus impactos.
+
+*Distinções Importantes*
+
+Economia (economy): o sistema de produção, distribuição e consumo de bens e serviços.
+Ciências Econômicas (economics): o estudo científico da economia.
+Economia Política (political economy): um campo interdisciplinar que examina a relação entre economia e política.
+
+*Teoria de Smith*
+
+Para Adam Smith, o mercado converte o interesse privado em benefício público, não por benevolência, mas por meio de mecanismos de mercado.
+
+## Aula 3 - Introdução à História Econômica 2
+### Braudel, "A Dinâmica do Capitalismo" cap. 2, "Os jogos da troca".
 
 ![navio naufragado]({{ site.baseurl }}/assets/images/navio.jpg)
 
