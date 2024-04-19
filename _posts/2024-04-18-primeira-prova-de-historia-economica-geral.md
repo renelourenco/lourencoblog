@@ -21,7 +21,7 @@ A economia política clássica (Ricardo, Say) deu origem às ciências econômic
 
 **Surgimento da História Econômica**
 
-A revista Annallis se dedicou ao estudo dos problemas econômicos e conceitos históricos.
+A revista Annales se dedicou ao estudo dos problemas econômicos e conceitos históricos.
 A história econômica se preocupa com o passado, analisando as categorias econômicas e seus impactos.
 
 **Distinções Importantes**
@@ -40,6 +40,33 @@ Para Adam Smith, o mercado converte o interesse privado em benefício público, 
 
 ## Aula 3 - Introdução à História Econômica 2
 ### Braudel, "A Dinâmica do Capitalismo" cap. 2, "Os jogos da troca".
+
+Fernand Braudel, historiador francês, propôs uma visão diferente do surgimento do capitalismo, desafiando a teoria marxista que o associa à Revolução Industrial. Ele argumenta que o capitalismo existia antes da Revolução Industrial, embora em uma forma diferente.
+
+**Três Esferas Econômicas na Idade Média**
+
+Braudel identificou três esferas econômicas distintas:
+
+1. Economia de Subsistência: Autoconsumo, baseada na tradição e necessidades básicas.
+2. Comércio Local: Rotineiro, regional, regulado pelo mercado (oferta e demanda), sem intermediários.
+3. Capitalismo: Investimentos em larga escala, comércio a longas distâncias, alto risco e alta lucratividade.
+
+![Pirâmide Braudel]({{ site.baseurl }}/assets/Vida_Economica_Segundo_Braudel_1712075769760_0.png)
+
+**Características do Capitalismo**
+
+Opaco: Origens desconhecidas, não repetitivo, complexo.
+Arriscado: Demora para recompor o capital.
+Monopolista: Elevado poder de mercado.
+Manipulável: Condições de mercado manipuladas, não sujeitas à concorrência.
+Associado ao Estado: Articulação com o poder político.
+Internacional: Ultrapassa fronteiras, envolvendo relações entre países.
+
+![Pirâmide Braudel]({{ site.baseurl }}/assets/Outra_analise_da_vida_economica_de_Braudel_1712076319270_0.png)
+
+
+
+
 
 ![navio naufragado]({{ site.baseurl }}/assets/images/navio.jpg)
 
