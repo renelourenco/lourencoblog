@@ -30,12 +30,12 @@ Economia (economy): o sistema de produção, distribuição e consumo de bens e 
 Ciências Econômicas (economics): o estudo científico da economia.
 Economia Política (political economy): um campo interdisciplinar que examina a relação entre economia e política.
 
+*A Economia adquiriu progressivamente status de ciência depois da publicação, em 1776, de A Riqueza das Nações, de Adam Smith. No século XIX, uma vasta produção de estudos da então chamada Economia Política consolidou-a como uma disciplina socialmente reconhecida: Thomas Malthus, David Ricardo, Jean Baptiste Say, John Stuart Mill são alguns dos chamados economistas clássicos aos quais se agrega, em vertente distinta, crítica, Karl Marx. A partir de 1870, houve uma mudança substancial no pensamento econômico dominante: a chamada revolução marginalista alterou o foco da análise econômica, sendo sintomática a troca do nome da disciplina de Economia Política para Economia: o austríaco Karl Menger, o suíço Leon Walras e o inglês Stanley Jevons foram pioneiros dessa nova corrente, que se consolidou como principal paradigma da teoria econômica (e que, ao menos em parte, se mantém até hoje).*
+- Saes e Saes p. 21
+
 **Teoria de Smith**
 
 Para Adam Smith, o mercado converte o interesse privado em benefício público, não por benevolência, mas por meio de mecanismos de mercado.
-
-*A Economia adquiriu progressivamente status de ciência depois da publicação, em 1776, de A Riqueza das Nações, de Adam Smith. No século XIX, uma vasta produção de estudos da então chamada Economia Política consolidou-a como uma disciplina socialmente reconhecida: Thomas Malthus, David Ricardo, Jean Baptiste Say, John Stuart Mill são alguns dos chamados economistas clássicos aos quais se agrega, em vertente distinta, crítica, Karl Marx. A partir de 1870, houve uma mudança substancial no pensamento econômico dominante: a chamada revolução marginalista alterou o foco da análise econômica, sendo sintomática a troca do nome da disciplina de Economia Política para Economia: o austríaco Karl Menger, o suíço Leon Walras e o inglês Stanley Jevons foram pioneiros dessa nova corrente, que se consolidou como principal paradigma da teoria econômica (e que, ao menos em parte, se mantém até hoje).*
-- Saes e Saes p. 21
 
 
 ## Aula 3 - Introdução à História Econômica 2
