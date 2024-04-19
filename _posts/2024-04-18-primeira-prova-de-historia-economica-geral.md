@@ -191,6 +191,8 @@ O estado absolutista é uma forma de governo em que o monarca possui poderes abs
 
 A formação do estado absolutista foi um processo complexo que envolveu a luta de classes, a expansão do comércio e a necessidade de uma autoridade centralizada. Ele preparou o terreno para o desenvolvimento do capitalismo e do estado moderno.
 
+*Essencialmente, o absolutismo era apenas isto: um aparelho de dominação feudal recolocado e reforçado, destinado a sujeitar as massas camponesas à sua posição tradicional. Nunca foi um árbitro entre a aristocracia e a burguesia, e menos ainda um instrumento da burguesia nascente contra a aristocracia: ele era a nova carapaça política de uma nobreza atemorizada.*
+
 
 ## Aula 8 - Acumulação primitiva e a transição ao capitalismo industrial
 ### Marx, cap. 24.
