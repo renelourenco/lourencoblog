@@ -70,7 +70,40 @@ Internacional: Ultrapassa fronteiras, envolvendo relações entre países.
 ## Aula 4 - O feudalismo e a transição ao capitalismo 1
 ### Anderson (1998), caps. “Em busca de uma síntese” e “O Modo de Produção Feudal”
 
+Para Anderson, o feudalismo foi uma organização socioeconômica que surgiu da transição do Império Romano e da herança germânica. Sendo caracterizado por relações feudais e uma fonte de poder baseada na posse da terra.
 
+**Materialismo Histórico e Dialética**
+
+Perry Anderson, marxista, baseia-se no materialismo histórico dialético para explicar as mudanças sociais. A dialética envolve uma mudança inerente, onde uma tese enfrenta uma antítese, resultando em uma nova síntese.
+
+**Passagem do Modo de Produção Antigo ao Feudalismo**
+
+O feudalismo surgiu da síntese entre o modo de produção antigo (germânico) e o escravista (romano).
+
+**Império Romano e Modo de Produção Escravista**
+
+O Império Romano dependia do trabalho escravo, que impulsionava as conquistas militares. Com o tempo, o suprimento de escravos diminuiu, levando à inflação e instabilidade.
+
+**Ascensão do Colonato**
+
+Os impostos crescentes e as invasões levaram à ruralização, com os camponeses fugindo para as terras dos senhores feudais. Surgiu o colonato, uma classe dependente de produtores rurais.
+
+**Herança Germânica**
+
+As sociedades tribais germânicas tinham um modo de produção antigo, com guerreiros e produtores. Após a queda de Roma, os germânicos confiscaram latifúndios e distribuíram terras entre si.
+
+**Feudalismo: Uma Síntese**
+
+O feudalismo surgiu da fusão dos legados romano e germânico. Os senhores feudais concediam terras em troca de serviços militares, enquanto os camponeses trabalhavam em economia de subsistência.
+
+**Relações Feudais**
+
+Vassalagem: Relação horizontal de ajuda mútua entre senhores e vassalos.
+Servidão: Relação vertical entre senhores e camponeses, onde os camponeses trabalhavam as terras em troca de proteção e uso da terra.
+
+
+## Aula 5 - O feudalismo e a transição ao capitalismo 2
+### Pirenne, cap. 5.
  
 
 Espero que todos estejam bem e lembrem-se: **Busquem conhecimento**.
