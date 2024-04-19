@@ -105,6 +105,65 @@ Servidão: Relação vertical entre senhores e camponeses, onde os camponeses tr
 ## Aula 5 - O feudalismo e a transição ao capitalismo 2
 ### Pirenne, cap. 5.
  
+**Dificuldades Comerciais na Alta Idade Média (Séculos V-VIII)**
+
+Henri Pirenne argumenta que as dificuldades comerciais no início da Idade Média foram causadas pela tomada do Mar Mediterrâneo pelos muçulmanos. Isso interrompeu as rotas comerciais tradicionais entre a Europa e o Oriente, levando a uma crise econômica.
+
+**Crise Demográfica e Crescimento Econômico**
+
+A crise econômica resultou em uma crise demográfica, pois as pessoas lutavam para sobreviver. No entanto, por volta do ano 1000, houve um crescimento demográfico devido ao crescimento econômico impulsionado pelas navegações. Isso levou a um grande comércio medieval, com exportações e importações significativas.
+
+**Reabertura do Mediterrâneo e Cruzadas**
+
+A reabertura do Mar Mediterrâneo e as Cruzadas facilitaram o comércio entre a Europa e a Ásia. Isso levou a um aumento no comércio de especiarias, tecidos e outros bens.
+
+**Capitalismo Comercial**
+
+Pirenne argumenta que um capitalismo comercial existia na Europa desde o século XII. Este capitalismo era caracterizado pelo comércio de longa distância e pela acumulação de capital.
+
+
+## Aula 6 - O feudalismo e a transição ao capitalismo 3
+### Anderson (1998), cap. “A Crise Geral”.
+
+**Cronologia do Feudalismo**
+
+* Século IX: Surgimento
+* Séculos X-XIII: Expansão e auge
+* Séculos XIV-XV: Crise e interrupção da expansão
+
+**Auge do Feudalismo**
+
+No auge do feudalismo (séculos XI-XIII), a relação de produção dominante era entre senhores (donos da terra) e servos (produtores). Os servos pagavam tributos e trabalhavam as terras dos senhores.
+
+**Fatores da Crise**
+
+A crise do feudalismo no século XIV foi causada por uma queda na produtividade agrícola devido ao esgotamento do solo, escassez de novas terras e condições climáticas adversas.
+
+**Consequências da Crise**
+
+* Queda nos rendimentos senhoriais
+* Inflação dos bens de luxo
+* Guerra dos Cem Anos
+* Peste Negra
+* Esgotamento das minas de prata
+
+**Mudanças nas Relações de Produção**
+
+A crise levou a uma mudança nas relações de produção. Os senhores afrouxaram as restrições sobre os servos, que se transformaram em camponeses. Os camponeses pagavam taxas em dinheiro e não estavam presos à terra.
+
+**Lutas de Classe**
+
+A crise acirrou as lutas de classe. Os camponeses se revoltaram contra os senhores e fugiram para a zona rural.
+
+**Conclusão**
+
+A crise do feudalismo levou a uma mudança nas relações de produção e ao surgimento de novas classes sociais. Isso preparou o terreno para a transição ao capitalismo.
+
+
+## Aula 7 - A formação do Estado Moderno e o absolutismo
+### Anderson (1985), cap. “O estado absolutista no Ocidente”
+
+
 
 Espero que todos estejam bem e lembrem-se: **Busquem conhecimento**.
 
