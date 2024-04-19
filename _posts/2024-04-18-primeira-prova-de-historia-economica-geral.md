@@ -5,7 +5,7 @@ author: rene
 categories: [ Ciências Econômicas ]
 image: assets/images/31.png
 featured: true
-hidden: true
+hidden: false
 ---
 Este é um resumo bastante condensado das aulas de História Econômica Geral para que eu salve as informações e use para estudar.
 
