@@ -9,8 +9,8 @@ hidden: false
 ---
 Este é um resumo bastante condensado das aulas de História Econômica Geral para que eu salve as informações e use para estudar.
 
-## Aula 2 - Introdução à História Econômica 1
-### Saes e Saes, Introdução
+### Aula 2 - Introdução à História Econômica 1
+#### Saes e Saes, Introdução
 
 A história econômica explora a relação entre história e economia, estudando os esforços humanos para atender às suas necessidades materiais.
 
@@ -38,8 +38,8 @@ Economia Política (political economy): um campo interdisciplinar que examina a 
 Para Adam Smith, o mercado converte o interesse privado em benefício público, não por benevolência, mas por meio de mecanismos de mercado.
 
 
-## Aula 3 - Introdução à História Econômica 2
-### Braudel, "A Dinâmica do Capitalismo" cap. 2, "Os jogos da troca".
+### Aula 3 - Introdução à História Econômica 2
+#### Braudel, "A Dinâmica do Capitalismo" cap. 2, "Os jogos da troca".
 
 Fernand Braudel, historiador francês, propôs uma visão diferente do surgimento do capitalismo, desafiando a teoria marxista que o associa à Revolução Industrial. Ele argumenta que o capitalismo existia antes da Revolução Industrial, embora em uma forma diferente.
 
@@ -67,8 +67,8 @@ Internacional: Ultrapassa fronteiras, envolvendo relações entre países.
 ![Pirâmide Braudel]({{ site.baseurl }}/assets/Outra_analise_da_vida_economica_de_Braudel_1712076319270_0.png)
 
 
-## Aula 4 - O feudalismo e a transição ao capitalismo 1
-### Anderson (1998), caps. “Em busca de uma síntese” e “O Modo de Produção Feudal”
+### Aula 4 - O feudalismo e a transição ao capitalismo 1
+#### Anderson (1998), caps. “Em busca de uma síntese” e “O Modo de Produção Feudal”
 
 Para Anderson, o feudalismo foi uma organização socioeconômica que surgiu da transição do Império Romano e da herança germânica. Sendo caracterizado por relações feudais e uma fonte de poder baseada na posse da terra.
 
@@ -102,8 +102,8 @@ Vassalagem: Relação horizontal de ajuda mútua entre senhores e vassalos.
 Servidão: Relação vertical entre senhores e camponeses, onde os camponeses trabalhavam as terras em troca de proteção e uso da terra.
 
 
-## Aula 5 - O feudalismo e a transição ao capitalismo 2
-### Pirenne, cap. 5.
+### Aula 5 - O feudalismo e a transição ao capitalismo 2
+#### Pirenne, cap. 5.
  
 **Dificuldades Comerciais na Alta Idade Média (Séculos V-VIII)**
 
@@ -122,8 +122,8 @@ A reabertura do Mar Mediterrâneo e as Cruzadas facilitaram o comércio entre a 
 Pirenne argumenta que um capitalismo comercial existia na Europa desde o século XII. Este capitalismo era caracterizado pelo comércio de longa distância e pela acumulação de capital.
 
 
-## Aula 6 - O feudalismo e a transição ao capitalismo 3
-### Anderson (1998), cap. “A Crise Geral”.
+### Aula 6 - O feudalismo e a transição ao capitalismo 3
+#### Anderson (1998), cap. “A Crise Geral”.
 
 **Cronologia do Feudalismo**
 
@@ -160,8 +160,8 @@ A crise acirrou as lutas de classe. Os camponeses se revoltaram contra os senhor
 A crise do feudalismo levou a uma mudança nas relações de produção e ao surgimento de novas classes sociais. Isso preparou o terreno para a transição ao capitalismo.
 
 
-## Aula 7 - A formação do Estado Moderno e o absolutismo
-### Anderson (1985), cap. “O estado absolutista no Ocidente”
+### Aula 7 - A formação do Estado Moderno e o absolutismo
+#### Anderson (1985), cap. “O estado absolutista no Ocidente”
 
 **Materialismo Histórico e Dialético**
 
@@ -194,11 +194,21 @@ A formação do estado absolutista foi um processo complexo que envolveu a luta 
 *Essencialmente, o absolutismo era apenas isto: um aparelho de dominação feudal recolocado e reforçado, destinado a sujeitar as massas camponesas à sua posição tradicional. Nunca foi um árbitro entre a aristocracia e a burguesia, e menos ainda um instrumento da burguesia nascente contra a aristocracia: ele era a nova carapaça política de uma nobreza atemorizada.*
 
 
-## Aula 8 - Acumulação primitiva e a transição ao capitalismo industrial
-### Marx, cap. 24.
+### Aula 8 - Acumulação primitiva e a transição ao capitalismo industrial
+#### Marx, cap. 24.
 
 
+### Aula 9 - Mercantilismo
+#### Novais, cap. 2 parte 1.
 
+### Aula 10 - A crise do Antigo Regime
+#### Novais, cap. 1, parte 3, e cap. 2, parte 2.
+
+### Aula 11 - A Revolução Industrial 1
+#### Hobsbawm (1982), cap. 2.
+
+### Aula 12 - A Revolução Industrial 2
+#### Hobsbawm (1978), cap. 6.
 
 Espero que todos estejam bem e lembrem-se: **Busquem conhecimento**.
 
