@@ -163,6 +163,39 @@ A crise do feudalismo levou a uma mudança nas relações de produção e ao sur
 ## Aula 7 - A formação do Estado Moderno e o absolutismo
 ### Anderson (1985), cap. “O estado absolutista no Ocidente”
 
+**Materialismo Histórico e Dialético**
+
+Perry Anderson usa o materialismo histórico dialético para explicar a formação do estado absolutista. Ele argumenta que a luta de classes resolveu-se em última instância no nível político, não no econômico ou cultural.
+
+**Conceito de Estado-Nação**
+
+Um estado-nação é uma sociedade politicamente organizada que compartilha um destino comum. Possui um território, um estado e uma nação. O objetivo do estado-nação é garantir a segurança e o desenvolvimento econômico.
+
+**Base Jurídica do Estado Absolutista**
+
+O direito romano forneceu a base jurídica para o estado absolutista. Ele expandiu o conceito de propriedade privada e permitiu a livre expansão do capital.
+
+**Estado Absolutista**
+
+O estado absolutista é uma forma de governo em que o monarca possui poderes absolutos. Ele surge como uma resposta à crise do feudalismo, que levou à perda de poder dos senhores feudais.
+
+**Características do Estado Absolutista**
+
+* Monarquia centralizada
+* Burocracia estatal
+* Sistema fiscal burocrático civil
+* Criação de mercados de terras e companhias de comércio
+* Mercantilismo (dificultar a importação e facilitar a exportação)
+
+**Conclusão**
+
+A formação do estado absolutista foi um processo complexo que envolveu a luta de classes, a expansão do comércio e a necessidade de uma autoridade centralizada. Ele preparou o terreno para o desenvolvimento do capitalismo e do estado moderno.
+
+
+## Aula 8 - Acumulação primitiva e a transição ao capitalismo industrial
+### Marx, cap. 24.
+
+
 
 
 Espero que todos estejam bem e lembrem-se: **Busquem conhecimento**.
