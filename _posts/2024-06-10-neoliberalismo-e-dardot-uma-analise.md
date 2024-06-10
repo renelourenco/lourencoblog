@@ -3,7 +3,7 @@ layout: post
 title:  "Neoliberalismo e Dardot: Uma Análise"
 author: rene
 categories: [ Ciências Econômicas ]
-image: assets/images/32.jpg
+image: assets/images/32.png
 featured: true
 hidden: false
 ---
