@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Primeira prova de História Econômica Geral"
+title:  "Segunda prova de História Econômica Geral"
 author: rene
 categories: [ Ciências Econômicas ]
 image: assets/images/31.png
