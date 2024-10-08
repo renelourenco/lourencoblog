@@ -10,13 +10,13 @@ hidden: false
 
 Transcrição dos slides...
 
-###Aula 1
+### Aula 1
 
 Saes e Saes, 2013, cap. 2; Mendonça, 2002, cap. 2. 
 
 Conjuntura Europeia à época do Descobrimento:
 
-####Contexto histórico
+#### Contexto histórico
 
 Século XV: denominada de “Era dos Descobrimentos” ou “Era das navegações”
 
@@ -26,7 +26,7 @@ Estado Absolutista
 
 Expansão comercial e marítima
 
-####Conjuntura europeia à época do descobrimento
+#### Conjuntura europeia à época do descobrimento
 
 *Contexto histórico*
 
@@ -38,7 +38,7 @@ Estado Absolutista
 
 Expansão comercial e marítima
 
-####Antecedentes
+#### Antecedentes
 
 Crises do século XIV: 
 Agrária: condições climáticas desfavoráveis, solos inadequados e técnicas primitivas;
@@ -64,9 +64,9 @@ A expansão europeia ocorreu por uma série de fatores:
 -crescimento da população europeia.
 
 Portugal seria pioneiro neste processo de expansão, fruto dos seguintes interesses:
-	1. Nobres: busca por novas terras;
-	2. Comerciantes: ampliação do comércio de mercadorias;
-	3. Monarquia: conquista de novos territórios para aumento de poder e riqueza.
+1 - Nobres: busca por novas terras;
+2 - Comerciantes: ampliação do comércio de mercadorias;
+3 - Monarquia: conquista de novos territórios para aumento de poder e riqueza.
 
 *Importante: a centralização das monarquias.*
 As monarquias já existiam, mas não tinham capacidade de centralizar um conjunto de ações que foram decisivas para esta expansão do sec. XV (o poder feudal era maior que o poder das monarquias), principalmente quanto ao acúmulo suficiente de capital.
@@ -135,7 +135,7 @@ A expansão marítima e comercial, liderada por Portugal e Espanha, permitiu a c
  Só foi possível graças a ação dos Estados Nacionais nos séculos XVI e XVII.
  E foi resultado de políticas econômicas estatais (mercantilismo) que permitiram a expansão das economias nacionais para uma economia mundial.
 
-###Aula 2
+### Aula 2
 RB: Zevallos, 2015; Prado Jr, 1961, p. 13-26.   
 
 #### A América Indígena
@@ -180,7 +180,7 @@ Sempre se parte de um ponto de vista e se deve relativizar, para estudar e compr
 
 OBS. Maybe acaso maybe intencionalidade.
 
-###A ocupação do Território. A colonização Portuguesa.
+### A ocupação do Território. A colonização Portuguesa.
 
 A ocupação do território brasileiro é a ocupação da América portuguesa (território português na América). Portanto, este território seria ocupado de acordo com os interesses portugueses.
 
@@ -269,7 +269,7 @@ Com o tempo as relações existentes na Colônia vão se modificando, inclusive 
 O fim da União Ibérica (1640) indica a retomada da colônia pelos portugueses, mas era evidente que um governador geral era insuficiente para a gestão do território.
 Anos mais tarde o ouro começa a ser encontrado no território, sendo extremamente satisfatório à metrópole. Com o tempo ocorreria grande migração de europeus rumo à colônia em busca do ouro.
 
-###Aula 3 - O ciclo do Pau-Brasil
+### Aula 3 - O ciclo do Pau-Brasil
 
 O período de 1500 a 1530 também é conhecido como “pré-colonial”.
 Inicialmente, as viagens à costa que viria a ser o Brasil eram exploratórias.
@@ -316,7 +316,7 @@ O “ciclo” acabou não sendo longo, mas foi muito intenso e propiciou geraç�
 Não houve núcleos significativos de povoamento neste período.
 A ocupação efetiva do território brasileiro viria a ocorrer a partir de 1530.
 
-###Aula 4 - O ciclo do açúcar - Parte 1
+### Aula 4 - O ciclo do açúcar - Parte 1
 Furtado 2009, cap VIII a XII
 
 Introdução: o ciclo açucareiro
@@ -544,7 +544,7 @@ A escravidão encontrava apoio nas bulas papais;
  A “casa grande” inicialmente não era grande;
  Os membros da família do senhor de engenho quase nunca realizavam serviços braçais.
 
-###Aula 6
+### Aula 6
 
 Ciclo do Ouro - Parte 1
 Prado Junior, 1969, cap. 7. Mendonça, 2002, cap. 8.
@@ -622,7 +622,7 @@ Houve uma atração significativa de parte da população portuguesa para o terr
  Minas Gerais acabaria atraindo mais trabalhadores escravizados, tanto adquiridos no comércio junto a África, quanto também de outras regiões da Colônia.
  A estimativa é que ocorreu um aumento expressivo no afluxo de escravizados africanos na ordem de 800 mil trabalhadores durante o período da mineração.
 
-###Aula 7 - Ciclo do Ouro - Parte 2
+### Aula 7 - Ciclo do Ouro - Parte 2
 Simonsen, 2005, cap. X
 
 A economia do Ciclo do Ouro
@@ -720,7 +720,7 @@ Entre 1492-1800, 90% da prata e ouro que chegou na Europa foi extraída da Amér
 A extração de ouro no território “brasileiro” equivale a 50% do total mundial extraído ao longo dos séculos XVI, XVII e XVIII.
 A expansão demográfica e o surgimento de núcleos urbanos possibilitaram o advento de um mercado interno, desenvolvendo setores até então inexistentes.
 
-###Aula 8 - Outros produtos da economia colonial
+### Aula 8 - Outros produtos da economia colonial
 A revolução Industrial e seus efeitos sobre Portugal e sobre a colônia
 Linhares, 2020, cap. 3, Prado Jr. 1969 cap 12
 
