@@ -64,9 +64,9 @@ A expansão europeia ocorreu por uma série de fatores:
 -crescimento da população europeia.
 
 Portugal seria pioneiro neste processo de expansão, fruto dos seguintes interesses:
-1 - Nobres: busca por novas terras;
-2 - Comerciantes: ampliação do comércio de mercadorias;
-3 - Monarquia: conquista de novos territórios para aumento de poder e riqueza.
+1. Nobres: busca por novas terras;
+2. Comerciantes: ampliação do comércio de mercadorias;
+3. Monarquia: conquista de novos territórios para aumento de poder e riqueza.
 
 *Importante: a centralização das monarquias.*
 As monarquias já existiam, mas não tinham capacidade de centralizar um conjunto de ações que foram decisivas para esta expansão do sec. XV (o poder feudal era maior que o poder das monarquias), principalmente quanto ao acúmulo suficiente de capital.
@@ -577,7 +577,7 @@ Entre 1500 e 1700: Espanha – metais preciosos; Portugal – açúcar.
 
 A extração do Ouro
 
- Poderia ocorrer de duas formas: lavra ou faiscação.
+ Poderia ocorrer de duas formas: 	 ou faiscação.
 1. Lavra (grande extração): jazidas com determinada importância, necessitava de maior quantidade de ferramentas e mão de obra (dezenas de escravizados), com um estabelecimento fixo. As jazidas eram divididas em lotes, com áreas de 5,5 a 66m2.
 2. Faiscação (pequena extração): era exercida por indivíduos isolados (homens livres e alguns trabalhadores escravizados), com ferramentas precárias e deslocamento contínuo.
 
