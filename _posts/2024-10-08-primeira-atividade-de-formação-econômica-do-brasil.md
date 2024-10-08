@@ -8,6 +8,8 @@ featured: true
 hidden: false
 ---
 
+Transcrição dos slides...
+
 ###Aula 1
 
 Saes e Saes, 2013, cap. 2; Mendonça, 2002, cap. 2. 
