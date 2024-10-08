@@ -10,21 +10,9 @@ hidden: false
 
 Transcrição dos slides...
 
-### Aula 1
+### Aula 1 - Contexto Histórico
 
 Saes e Saes, 2013, cap. 2; Mendonça, 2002, cap. 2. 
-
-Conjuntura Europeia à época do Descobrimento:
-
-#### Contexto histórico
-
-Século XV: denominada de “Era dos Descobrimentos” ou “Era das navegações”
-
-Mercantilismo
-
-Estado Absolutista
-
-Expansão comercial e marítima
 
 #### Conjuntura europeia à época do descobrimento
 
